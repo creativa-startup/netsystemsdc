@@ -1,0 +1,33 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Allow public read access to content for the Landing Page
+    match /content/{document=**} {
+      allow read: if true;
+      allow write: if request.auth != null;
+    }
+    
+    // Allow public read for solutions list
+    match /solutions/{document=**} {
+      allow read: if true;
+      allow write: if request.auth != null;
+    }
+    
+    // Allow public read for SEO settings
+    match /settings_seo/{document=**} {
+      allow read: if true;
+      allow write: if request.auth != null;
+    }
+    
+    // Allow public creation of leads (contact form)
+    match /leads/{document=**} {
+      allow create: if true;
+      allow read, update, delete: if request.auth != null;
+    }
+    
+    // Allow admin access to everything else
+    match /{document=**} {
+      allow read, write: if request.auth != null;
+    }
+  }
+}
