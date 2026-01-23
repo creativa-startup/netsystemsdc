@@ -11,7 +11,7 @@ export default async function Catalog() {
                 <FileText size={400} />
             </div>
 
-            <div className="container mx-auto px-4 relative z-10">
+            <div className="container mx-auto px-6 lg:px-[100px] relative z-10">
                 <div className="flex flex-col md:flex-row items-center justify-between gap-12">
                     <div className="md:w-1/2 space-y-6">
                         <h2 className="text-3xl md:text-5xl font-bold leading-tight">
@@ -22,7 +22,19 @@ export default async function Catalog() {
                         </p>
                     </div>
 
-                    <div className="md:w-1/2 flex justify-center md:justify-end">
+                    <div className="md:w-1/2 flex flex-col justify-center items-center md:items-end gap-6">
+                        {content.catalogLink && (
+                            <Link
+                                href={content.catalogLink}
+                                target="_blank"
+                                className="w-full max-w-md bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-xl font-bold text-center transition-all shadow-xl flex items-center justify-center gap-3 group"
+                            >
+                                <FileText size={24} className="group-hover:scale-110 transition-transform" />
+                                {content.ctaText || 'Descargar Catálogo Completo'}
+                                <Download size={20} className="animate-bounce" />
+                            </Link>
+                        )}
+
                         <div className="grid gap-4 w-full max-w-md">
                             <Link
                                 href="/catalog/technical"

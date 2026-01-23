@@ -18,7 +18,7 @@ export default async function HeroSection() {
                 <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-gray-900/90" />
             </div>
 
-            <div className="container mx-auto px-4 relative z-10 text-center">
+            <div className="container mx-auto px-6 lg:px-[100px] relative z-10 text-center">
                 <div className="max-w-4xl mx-auto space-y-8">
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium">
                         <span className="relative flex h-2 w-2">

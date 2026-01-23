@@ -20,6 +20,13 @@ export interface CatalogContent {
     title: string;
     description: string;
     ctaText: string;
+    catalogLink?: string;
+}
+
+export interface RRSSContent {
+    facebook: string;
+    instagram: string;
+    whatsapp: string;
 }
 
 export async function getHeroContent(): Promise<HeroContent> {
@@ -72,5 +79,20 @@ export async function getCatalogContent(): Promise<CatalogContent> {
         title: 'Catálogo Técnico & Lista de Precios',
         description: 'Acceda a nuestra documentación técnica detallada y listas de precios actualizadas para licencias corporativas.',
         ctaText: 'Ver Catálogo'
+    };
+}
+
+export async function getRRSSContent(): Promise<RRSSContent> {
+    try {
+        const docRef = doc(db, 'content', 'rrss');
+        const docSnap = await getDoc(docRef);
+        if (docSnap.exists()) return docSnap.data() as RRSSContent;
+    } catch (e) {
+        console.warn("fetch rrss content failed", e);
+    }
+    return {
+        facebook: '',
+        instagram: '',
+        whatsapp: ''
     };
 }

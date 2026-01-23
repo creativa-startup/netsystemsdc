@@ -1,12 +1,25 @@
-import { Settings, Server, Code, CheckCircle } from 'lucide-react';
-import { getSolutions } from '@/lib/db';
+import { Settings, Server, Code, CheckCircle, Shield, Zap, Cloud, Database, Lock, Cpu, Network, HardDrive, Wifi, Globe } from 'lucide-react';
+import { collection, getDocs } from 'firebase/firestore';
+import { db } from '@/lib/firebase';
 import { getSolutionsMeta } from '@/lib/content';
 
 const iconMap: Record<string, any> = {
-    Settings,
-    Server,
-    Code
+    Settings, Server, Code, CheckCircle, Shield, Zap, Cloud, Database, Lock, Cpu, Network, HardDrive, Wifi, Globe
 };
+
+async function getSolutions() {
+    try {
+        const querySnapshot = await getDocs(collection(db, 'solutions'));
+        const solutions: any[] = [];
+        querySnapshot.forEach((doc) => {
+            solutions.push({ id: doc.id, ...doc.data() });
+        });
+        return solutions;
+    } catch (error) {
+        console.error("Error fetching solutions:", error);
+        return [];
+    }
+}
 
 export default async function SolutionsGrid() {
     const solutions = await getSolutions();
@@ -14,7 +27,7 @@ export default async function SolutionsGrid() {
 
     return (
         <section id="solutions" className="py-24 bg-white dark:bg-black">
-            <div className="container mx-auto px-4">
+            <div className="container mx-auto px-6 lg:px-[100px]">
                 <div className="text-center max-w-3xl mx-auto mb-16">
                     <h2 className="text-3xl md:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
                         {meta.title}
@@ -25,7 +38,7 @@ export default async function SolutionsGrid() {
                 </div>
 
                 <div className="grid md:grid-cols-3 gap-8">
-                    {solutions.map((solution, index) => {
+                    {solutions.map((solution) => {
                         const Icon = iconMap[solution.icon] || Settings;
 
                         return (
@@ -46,7 +59,7 @@ export default async function SolutionsGrid() {
                                 </p>
 
                                 <ul className="space-y-3">
-                                    {solution.features.map((feature, i) => (
+                                    {solution.features?.map((feature: string, i: number) => (
                                         <li key={i} className="flex items-center gap-3 text-sm text-gray-700 dark:text-gray-300">
                                             <CheckCircle size={16} className="text-green-500" />
                                             {feature}

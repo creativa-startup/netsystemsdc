@@ -33,7 +33,7 @@ export default function ContactSection() {
 
     return (
         <section id="contact" className="py-24 bg-white dark:bg-black">
-            <div className="container mx-auto px-4 max-w-4xl">
+            <div className="container mx-auto px-6 lg:px-[100px] max-w-4xl">
                 <div className="text-center mb-16">
                     <h2 className="text-3xl md:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
                         Hablemos de su Infraestructura

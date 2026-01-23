@@ -29,7 +29,7 @@ export default function BlogSection() {
 
     return (
         <section id="blog" className="py-24 bg-gray-50 dark:bg-gray-900">
-            <div className="container mx-auto px-4">
+            <div className="container mx-auto px-6 lg:px-[100px]">
                 <div className="flex items-end justify-between mb-12">
                     <div>
                         <h2 className="text-3xl md:text-5xl font-bold mb-4 text-gray-900 dark:text-white">
