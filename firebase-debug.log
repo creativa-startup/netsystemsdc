@@ -1,823 +1,94 @@
-[debug] [2026-01-26T04:06:38.496Z] ----------------------------------------------------------------------
-[debug] [2026-01-26T04:06:38.498Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\netpr\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
-[debug] [2026-01-26T04:06:38.498Z] CLI Version:   15.3.1
-[debug] [2026-01-26T04:06:38.498Z] Platform:      win32
-[debug] [2026-01-26T04:06:38.499Z] Node Version:  v24.13.0
-[debug] [2026-01-26T04:06:38.499Z] Time:          Sun Jan 25 2026 23:06:38 GMT-0500 (hora de Ecuador)
-[debug] [2026-01-26T04:06:38.499Z] ----------------------------------------------------------------------
+[debug] [2026-01-26T05:01:33.908Z] ----------------------------------------------------------------------
+[debug] [2026-01-26T05:01:33.911Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\netpr\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only functions
+[debug] [2026-01-26T05:01:33.911Z] CLI Version:   15.3.1
+[debug] [2026-01-26T05:01:33.911Z] Platform:      win32
+[debug] [2026-01-26T05:01:33.911Z] Node Version:  v24.13.0
+[debug] [2026-01-26T05:01:33.911Z] Time:          Mon Jan 26 2026 00:01:33 GMT-0500 (hora de Ecuador)
+[debug] [2026-01-26T05:01:33.911Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2026-01-26T04:06:39.765Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2026-01-26T04:06:39.765Z] > authorizing via signed-in user (startup@creativa.rocks)
-[debug] [2026-01-26T04:06:39.765Z] [iam] checking project netsystemsdc-1d977 for permissions ["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update"]
-[debug] [2026-01-26T04:06:39.766Z] Checked if tokens are valid: false, expires at: 1769400953225
-[debug] [2026-01-26T04:06:39.767Z] Checked if tokens are valid: false, expires at: 1769400953225
-[debug] [2026-01-26T04:06:39.767Z] > refreshing access token with scopes: []
-[debug] [2026-01-26T04:06:39.769Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
-[debug] [2026-01-26T04:06:39.769Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
-[debug] [2026-01-26T04:06:40.138Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
-[debug] [2026-01-26T04:06:40.138Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
-[debug] [2026-01-26T04:06:40.148Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/netsystemsdc-1d977:testIamPermissions [none]
-[debug] [2026-01-26T04:06:40.149Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/netsystemsdc-1d977:testIamPermissions x-goog-quota-user=projects/netsystemsdc-1d977
-[debug] [2026-01-26T04:06:40.149Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/netsystemsdc-1d977:testIamPermissions {"permissions":["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update"]}
-[debug] [2026-01-26T04:06:40.844Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/netsystemsdc-1d977:testIamPermissions 200
-[debug] [2026-01-26T04:06:40.844Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/netsystemsdc-1d977:testIamPermissions {"permissions":["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update"]}
-[debug] [2026-01-26T04:06:40.844Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:06:40.844Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:06:40.844Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/netsystemsdc-1d977 [none]
-[debug] [2026-01-26T04:06:41.245Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/netsystemsdc-1d977 200
-[debug] [2026-01-26T04:06:41.245Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/netsystemsdc-1d977 {"projectId":"netsystemsdc-1d977","projectNumber":"133124262183","displayName":"NetSystemsDc","name":"projects/netsystemsdc-1d977","resources":{"hostingSite":"netsystemsdc-1d977"},"state":"ACTIVE","etag":"1_b6b58955-8a05-4897-8265-2aa03e4452f7"}
-[debug] [2026-01-26T04:06:42.883Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:06:42.884Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:06:42.884Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/netsystemsdc-1d977/sites pageToken=&pageSize=10
-[debug] [2026-01-26T04:06:43.901Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/netsystemsdc-1d977/sites 200
-[debug] [2026-01-26T04:06:43.901Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/netsystemsdc-1d977/sites {"sites":[{"name":"projects/netsystemsdc-1d977/sites/netsystemsdc-1d977","defaultUrl":"https://netsystemsdc-1d977.web.app","appId":"1:133124262183:web:d62f68c133da37cc61c102","type":"DEFAULT_SITE"}]}
-[debug] [2026-01-26T04:06:43.901Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:06:43.901Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:06:43.902Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:133124262183:web:d62f68c133da37cc61c102/config [none]
-[debug] [2026-01-26T04:06:44.280Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:133124262183:web:d62f68c133da37cc61c102/config 200
-[debug] [2026-01-26T04:06:44.280Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:133124262183:web:d62f68c133da37cc61c102/config {"projectId":"netsystemsdc-1d977","appId":"1:133124262183:web:d62f68c133da37cc61c102","storageBucket":"netsystemsdc-1d977.firebasestorage.app","apiKey":"AIzaSyC4fvEv8goovWIDcM_OHGFVcFQSjz69VT8","authDomain":"netsystemsdc-1d977.firebaseapp.com","messagingSenderId":"133124262183","measurementId":"G-K43S0Z2P9E","projectNumber":"133124262183","version":"2"}
-[info] 
-   Thank you for trying our early preview of Next.js support on Firebase Hosting.
-   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
-   The integration is known to work with Next.js version 12 - 15.0. You may encounter errors.
-
-   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
-   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
-   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
-
-   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
-
-[debug] [2026-01-26T04:06:48.305Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:06:48.305Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:06:48.305Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/netsystemsdc-1d977/sites/netsystemsdc-1d977 [none]
-[debug] [2026-01-26T04:06:48.527Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/netsystemsdc-1d977/sites/netsystemsdc-1d977 200
-[debug] [2026-01-26T04:06:48.527Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/netsystemsdc-1d977/sites/netsystemsdc-1d977 {"name":"projects/netsystemsdc-1d977/sites/netsystemsdc-1d977","defaultUrl":"https://netsystemsdc-1d977.web.app","appId":"1:133124262183:web:d62f68c133da37cc61c102","type":"DEFAULT_SITE"}
-[info] ▲ Next.js 16.1.4 (Turbopack)
-
-[info] - Environments: .env.local
-
-
-[info]   Creating an optimized production build ...
-
-[info] ✓ Compiled successfully in 7.8s
-
-[info]   Skipping validation of types
-
-[info]   Collecting page data using 15 workers ...
-
-[info]   Generating static pages using 15 workers (0/15) ...
-
-[info] Rendering Blog Post Page. Slug: el-top-de-gamers-que-revolucionan-el-marketing-digital-influencia-engagement-y-estrategias-para-tu-marca
-
-[info]   Generating static pages using 15 workers (3/15) 
-
-[info]   Generating static pages using 15 workers (7/15) 
-
-[info] Fetch Result for slug: el-top-de-gamers-que-revolucionan-el-marketing-digital-influencia-engagement-y-estrategias-para-tu-marca Found
-
-[info]   Generating static pages using 15 workers (11/15) 
-
-[info] ✓ Generating static pages using 15 workers (15/15) in 591.4ms
-
-[info]   Finalizing page optimization ...
-
-[info] 
-
-[info] Route (app)                                                                                                                    Revalidate  Expire
-┌ ƒ /
-├ ○ /_not-found
-├ ○ /admin
-├ ○ /admin/blog
-├ ○ /admin/chat
-├ ○ /admin/content
-├ ○ /admin/lab
-├ ○ /admin/leads
-├ ○ /admin/login
-├ ○ /admin/seo
-├ ○ /admin/settings
-├ ƒ /api/generate-content
-├ ○ /blog                                                                                                                              1m      1y
-└ ● /blog/[category]/[slug]
-  └ /blog/tecnología/el-top-de-gamers-que-revolucionan-el-marketing-digital-influencia-engagement-y-estrategias-para-tu-marca
-
-
-[info] 
-○  (Static)   prerendered as static content
-●  (SSG)      prerendered as static HTML (uses generateStaticParams)
-ƒ  (Dynamic)  server-rendered on demand
-
-
-[info] Building a Cloud Function to run this application. This is needed due to:
-[info]  • use of fallback /blog/[category]/[slug]
-[info]  • use of revalidate /blog
-[info]  • non-static component /(landing)/page
-[info]  • non-static component /api/generate-content/route
-[info]  • route with server action /blog/[category]/[slug]
-[debug] [2026-01-26T04:07:02.566Z]  • route with server action /blog
-[debug] [2026-01-26T04:07:02.566Z]  • route with server action /
-[debug] [2026-01-26T04:07:02.566Z]  • route with server action /admin/blog
-[info]  • and 3 other reasons, use --debug to see more
-[info] 
-[debug] [2026-01-26T04:07:02.644Z] skipping /blog due to revalidate
-[debug] [2026-01-26T04:07:02.644Z] skipping /admin/blog due to server action
-[debug] [2026-01-26T04:07:02.665Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:07:02.665Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:07:02.665Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/netsystemsdc-1d977/sites/netsystemsdc-1d977 [none]
-[debug] [2026-01-26T04:07:03.355Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/netsystemsdc-1d977/sites/netsystemsdc-1d977 200
-[debug] [2026-01-26T04:07:03.355Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/netsystemsdc-1d977/sites/netsystemsdc-1d977 {"name":"projects/netsystemsdc-1d977/sites/netsystemsdc-1d977","defaultUrl":"https://netsystemsdc-1d977.web.app","appId":"1:133124262183:web:d62f68c133da37cc61c102","type":"DEFAULT_SITE"}
-[debug] [2026-01-26T04:07:52.728Z] [web frameworks] effective firebase.json:  {
-  "hosting": [
-    {
-      "source": ".",
-      "ignore": [
-        "firebase.json",
-        "**/.*",
-        "**/node_modules/**"
-      ],
-      "frameworksBackend": {
-        "region": "us-central1"
-      },
-      "site": "netsystemsdc-1d977",
-      "rewrites": [
-        {
-          "source": "/**",
-          "function": {
-            "functionId": "ssrnetsystemsdc1d977",
-            "region": "us-central1",
-            "pinTag": true
-          }
-        }
-      ],
-      "redirects": [],
-      "headers": [
-        {
-          "source": "/blog",
-          "headers": [
-            {
-              "key": "x-nextjs-stale-time",
-              "value": "300"
-            },
-            {
-              "key": "x-nextjs-prerender",
-              "value": "1"
-            },
-            {
-              "key": "x-next-cache-tags",
-              "value": "_N_T_/layout,_N_T_/(landing)/layout,_N_T_/(landing)/blog/layout,_N_T_/(landing)/blog/page,_N_T_/blog"
-            }
-          ]
-        },
-        {
-          "source": "/_not-found",
-          "headers": [
-            {
-              "key": "x-nextjs-stale-time",
-              "value": "300"
-            },
-            {
-              "key": "x-nextjs-prerender",
-              "value": "1"
-            },
-            {
-              "key": "x-next-cache-tags",
-              "value": "_N_T_/layout,_N_T_/_not-found/layout,_N_T_/_not-found/page,_N_T_/_not-found"
-            }
-          ]
-        },
-        {
-          "source": "/_global-error",
-          "headers": [
-            {
-              "key": "x-nextjs-stale-time",
-              "value": "300"
-            },
-            {
-              "key": "x-nextjs-prerender",
-              "value": "1"
-            },
-            {
-              "key": "x-next-cache-tags",
-              "value": "_N_T_/layout,_N_T_/_global-error/layout,_N_T_/_global-error/page,_N_T_/_global-error"
-            }
-          ]
-        },
-        {
-          "source": "/admin/chat",
-          "headers": [
-            {
-              "key": "x-nextjs-stale-time",
-              "value": "300"
-            },
-            {
-              "key": "x-nextjs-prerender",
-              "value": "1"
-            },
-            {
-              "key": "x-next-cache-tags",
-              "value": "_N_T_/layout,_N_T_/admin/layout,_N_T_/admin/chat/layout,_N_T_/admin/chat/page,_N_T_/admin/chat"
-            }
-          ]
-        },
-        {
-          "source": "/admin/content",
-          "headers": [
-            {
-              "key": "x-nextjs-stale-time",
-              "value": "300"
-            },
-            {
-              "key": "x-nextjs-prerender",
-              "value": "1"
-            },
-            {
-              "key": "x-next-cache-tags",
-              "value": "_N_T_/layout,_N_T_/admin/layout,_N_T_/admin/content/layout,_N_T_/admin/content/page,_N_T_/admin/content"
-            }
-          ]
-        },
-        {
-          "source": "/admin/lab",
-          "headers": [
-            {
-              "key": "x-nextjs-stale-time",
-              "value": "300"
-            },
-            {
-              "key": "x-nextjs-prerender",
-              "value": "1"
-            },
-            {
-              "key": "x-next-cache-tags",
-              "value": "_N_T_/layout,_N_T_/admin/layout,_N_T_/admin/lab/layout,_N_T_/admin/lab/page,_N_T_/admin/lab"
-            }
-          ]
-        },
-        {
-          "source": "/admin/leads",
-          "headers": [
-            {
-              "key": "x-nextjs-stale-time",
-              "value": "300"
-            },
-            {
-              "key": "x-nextjs-prerender",
-              "value": "1"
-            },
-            {
-              "key": "x-next-cache-tags",
-              "value": "_N_T_/layout,_N_T_/admin/layout,_N_T_/admin/leads/layout,_N_T_/admin/leads/page,_N_T_/admin/leads"
-            }
-          ]
-        },
-        {
-          "source": "/admin/login",
-          "headers": [
-            {
-              "key": "x-nextjs-stale-time",
-              "value": "300"
-            },
-            {
-              "key": "x-nextjs-prerender",
-              "value": "1"
-            },
-            {
-              "key": "x-next-cache-tags",
-              "value": "_N_T_/layout,_N_T_/admin/layout,_N_T_/admin/login/layout,_N_T_/admin/login/page,_N_T_/admin/login"
-            }
-          ]
-        },
-        {
-          "source": "/admin/blog",
-          "headers": [
-            {
-              "key": "x-nextjs-stale-time",
-              "value": "300"
-            },
-            {
-              "key": "x-nextjs-prerender",
-              "value": "1"
-            },
-            {
-              "key": "x-next-cache-tags",
-              "value": "_N_T_/layout,_N_T_/admin/layout,_N_T_/admin/blog/layout,_N_T_/admin/blog/page,_N_T_/admin/blog"
-            }
-          ]
-        },
-        {
-          "source": "/admin",
-          "headers": [
-            {
-              "key": "x-nextjs-stale-time",
-              "value": "300"
-            },
-            {
-              "key": "x-nextjs-prerender",
-              "value": "1"
-            },
-            {
-              "key": "x-next-cache-tags",
-              "value": "_N_T_/layout,_N_T_/admin/layout,_N_T_/admin/page,_N_T_/admin"
-            }
-          ]
-        },
-        {
-          "source": "/admin/seo",
-          "headers": [
-            {
-              "key": "x-nextjs-stale-time",
-              "value": "300"
-            },
-            {
-              "key": "x-nextjs-prerender",
-              "value": "1"
-            },
-            {
-              "key": "x-next-cache-tags",
-              "value": "_N_T_/layout,_N_T_/admin/layout,_N_T_/admin/seo/layout,_N_T_/admin/seo/page,_N_T_/admin/seo"
-            }
-          ]
-        },
-        {
-          "source": "/favicon.ico",
-          "headers": [
-            {
-              "key": "cache-control",
-              "value": "public, max-age=0, must-revalidate"
-            },
-            {
-              "key": "content-type",
-              "value": "image/x-icon"
-            },
-            {
-              "key": "x-next-cache-tags",
-              "value": "_N_T_/layout,_N_T_/favicon.ico/layout,_N_T_/favicon.ico/route,_N_T_/favicon.ico"
-            }
-          ]
-        },
-        {
-          "source": "/admin/settings",
-          "headers": [
-            {
-              "key": "x-nextjs-stale-time",
-              "value": "300"
-            },
-            {
-              "key": "x-nextjs-prerender",
-              "value": "1"
-            },
-            {
-              "key": "x-next-cache-tags",
-              "value": "_N_T_/layout,_N_T_/admin/layout,_N_T_/admin/settings/layout,_N_T_/admin/settings/page,_N_T_/admin/settings"
-            }
-          ]
-        },
-        {
-          "source": "/**/*.[jt]s",
-          "headers": [
-            {
-              "key": "Set-Cookie",
-              "value": "__FIREBASE_DEFAULTS__=eyJjb25maWciOnsicHJvamVjdElkIjoibmV0c3lzdGVtc2RjLTFkOTc3IiwiYXBwSWQiOiIxOjEzMzEyNDI2MjE4Mzp3ZWI6ZDYyZjY4YzEzM2RhMzdjYzYxYzEwMiIsInN0b3JhZ2VCdWNrZXQiOiJuZXRzeXN0ZW1zZGMtMWQ5NzcuZmlyZWJhc2VzdG9yYWdlLmFwcCIsImFwaUtleSI6IkFJemFTeUM0ZnZFdjhnb292V0lEY01fT0hHRlZjRlFTano2OVZUOCIsImF1dGhEb21haW4iOiJuZXRzeXN0ZW1zZGMtMWQ5NzcuZmlyZWJhc2VhcHAuY29tIiwibWVzc2FnaW5nU2VuZGVySWQiOiIxMzMxMjQyNjIxODMiLCJtZWFzdXJlbWVudElkIjoiRy1LNDNTMFoyUDlFIiwicHJvamVjdE51bWJlciI6IjEzMzEyNDI2MjE4MyIsInZlcnNpb24iOiIyIn0sIl9hdXRoVG9rZW5TeW5jVVJMIjoiL19fc2Vzc2lvbiJ9; SameSite=Strict; Expires=2027-12-21T14:47:52.728Z; Path=/;"
-            }
-          ]
-        }
-      ],
-      "cleanUrls": true,
-      "trailingSlash": false,
-      "public": ".firebase\\netsystemsdc-1d977\\hosting",
-      "webFramework": "next_ssr"
-    }
-  ],
-  "functions": [
-    {
-      "source": ".firebase\\netsystemsdc-1d977\\functions",
-      "codebase": "firebase-frameworks-netsystemsdc-1d977"
-    }
-  ]
-}
-[debug] [2026-01-26T04:07:52.729Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2026-01-26T04:07:52.730Z] > authorizing via signed-in user (startup@creativa.rocks)
-[debug] [2026-01-26T04:07:52.730Z] [iam] checking project netsystemsdc-1d977 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
-[debug] [2026-01-26T04:07:52.730Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:07:52.730Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:07:52.731Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/netsystemsdc-1d977:testIamPermissions [none]
-[debug] [2026-01-26T04:07:52.731Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/netsystemsdc-1d977:testIamPermissions x-goog-quota-user=projects/netsystemsdc-1d977
-[debug] [2026-01-26T04:07:52.731Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/netsystemsdc-1d977:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
-[debug] [2026-01-26T04:07:53.220Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/netsystemsdc-1d977:testIamPermissions 200
-[debug] [2026-01-26T04:07:53.220Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/netsystemsdc-1d977:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2026-01-26T05:01:35.253Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-01-26T05:01:35.253Z] > authorizing via signed-in user (startup@creativa.rocks)
+[debug] [2026-01-26T05:01:35.254Z] [iam] checking project netsystemsdc-1d977 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2026-01-26T05:01:35.254Z] Checked if tokens are valid: true, expires at: 1769407223989
+[debug] [2026-01-26T05:01:35.255Z] Checked if tokens are valid: true, expires at: 1769407223989
+[debug] [2026-01-26T05:01:35.255Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/netsystemsdc-1d977:testIamPermissions [none]
+[debug] [2026-01-26T05:01:35.255Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/netsystemsdc-1d977:testIamPermissions x-goog-quota-user=projects/netsystemsdc-1d977
+[debug] [2026-01-26T05:01:35.255Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/netsystemsdc-1d977:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2026-01-26T05:01:35.804Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/netsystemsdc-1d977:testIamPermissions 200
+[debug] [2026-01-26T05:01:35.805Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/netsystemsdc-1d977:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2026-01-26T05:01:35.805Z] Checked if tokens are valid: true, expires at: 1769407223989
+[debug] [2026-01-26T05:01:35.805Z] Checked if tokens are valid: true, expires at: 1769407223989
+[debug] [2026-01-26T05:01:35.805Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/netsystemsdc-1d977/serviceAccounts/netsystemsdc-1d977@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2026-01-26T05:01:35.805Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/netsystemsdc-1d977/serviceAccounts/netsystemsdc-1d977@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2026-01-26T05:01:36.349Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/netsystemsdc-1d977/serviceAccounts/netsystemsdc-1d977@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2026-01-26T05:01:36.349Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/netsystemsdc-1d977/serviceAccounts/netsystemsdc-1d977@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
 [info] 
 [info] === Deploying to 'netsystemsdc-1d977'...
 [info] 
-[info] i  deploying functions, firestore, hosting 
-[debug] [2026-01-26T04:07:53.223Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:07:53.223Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:07:53.223Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/netsystemsdc-1d977 [none]
-[debug] [2026-01-26T04:07:53.389Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/netsystemsdc-1d977 200
-[debug] [2026-01-26T04:07:53.389Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/projects/netsystemsdc-1d977 {"projectNumber":"133124262183","projectId":"netsystemsdc-1d977","lifecycleState":"ACTIVE","name":"NetSystemsDc","labels":{"firebase":"enabled","firebase-core":"disabled"},"createTime":"2026-01-21T18:33:46.696764Z","parent":{"type":"organization","id":"434183839080"}}
-[info] i  functions: preparing codebase firebase-frameworks-netsystemsdc-1d977 for deployment 
+[info] i  deploying functions 
+[debug] [2026-01-26T05:01:36.353Z] Checked if tokens are valid: true, expires at: 1769407223989
+[debug] [2026-01-26T05:01:36.353Z] Checked if tokens are valid: true, expires at: 1769407223989
+[debug] [2026-01-26T05:01:36.353Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/netsystemsdc-1d977 [none]
+[debug] [2026-01-26T05:01:36.521Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/netsystemsdc-1d977 200
+[debug] [2026-01-26T05:01:36.521Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/projects/netsystemsdc-1d977 {"projectNumber":"133124262183","projectId":"netsystemsdc-1d977","lifecycleState":"ACTIVE","name":"NetSystemsDc","labels":{"firebase":"enabled","firebase-core":"disabled"},"createTime":"2026-01-21T18:33:46.696764Z","parent":{"type":"organization","id":"434183839080"}}
+[info] i  functions: preparing codebase default for deployment 
 [info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
 [info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
 [info] i  artifactregistry: ensuring required API artifactregistry.googleapis.com is enabled... 
-[debug] [2026-01-26T04:07:53.392Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:07:53.392Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:07:53.392Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/netsystemsdc-1d977/adminSdkConfig [none]
-[debug] [2026-01-26T04:07:53.893Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/netsystemsdc-1d977/adminSdkConfig 200
-[debug] [2026-01-26T04:07:53.893Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/netsystemsdc-1d977/adminSdkConfig {"projectId":"netsystemsdc-1d977","storageBucket":"netsystemsdc-1d977.firebasestorage.app"}
-[debug] [2026-01-26T04:07:53.894Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:07:53.894Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:07:53.894Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/netsystemsdc-1d977/configs [none]
-[debug] [2026-01-26T04:07:54.402Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/netsystemsdc-1d977/configs 200
-[debug] [2026-01-26T04:07:54.403Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/netsystemsdc-1d977/configs {}
-[debug] [2026-01-26T04:07:54.404Z] Validating nodejs source
+[debug] [2026-01-26T05:01:36.524Z] Checked if tokens are valid: true, expires at: 1769407223989
+[debug] [2026-01-26T05:01:36.524Z] Checked if tokens are valid: true, expires at: 1769407223989
+[debug] [2026-01-26T05:01:36.524Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/netsystemsdc-1d977/adminSdkConfig [none]
+[debug] [2026-01-26T05:01:36.971Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/netsystemsdc-1d977/adminSdkConfig 200
+[debug] [2026-01-26T05:01:36.972Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/netsystemsdc-1d977/adminSdkConfig {"projectId":"netsystemsdc-1d977","storageBucket":"netsystemsdc-1d977.firebasestorage.app"}
+[debug] [2026-01-26T05:01:36.972Z] Checked if tokens are valid: true, expires at: 1769407223989
+[debug] [2026-01-26T05:01:36.972Z] Checked if tokens are valid: true, expires at: 1769407223989
+[debug] [2026-01-26T05:01:36.972Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/netsystemsdc-1d977/configs [none]
+[debug] [2026-01-26T05:01:37.878Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/netsystemsdc-1d977/configs 200
+[debug] [2026-01-26T05:01:37.878Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/netsystemsdc-1d977/configs {}
+[debug] [2026-01-26T05:01:37.879Z] Validating nodejs source
 [warn] !  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
 [warn] !  functions: Please note that there will be breaking changes when you upgrade. 
-[debug] [2026-01-26T04:07:55.128Z] > [functions] package.json contents: {
-  "name": "temp-app",
-  "version": "0.1.0",
-  "private": true,
+[debug] [2026-01-26T05:01:38.744Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for NetSystemsDc",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
   "engines": {
     "node": "20"
   },
+  "main": "index.js",
   "dependencies": {
     "@google/generative-ai": "^0.24.1",
-    "date-fns": "^4.1.0",
-    "firebase": "^12.8.0",
-    "framer-motion": "^12.29.0",
-    "lucide-react": "^0.562.0",
-    "next": "16.1.4",
-    "next-themes": "^0.4.6",
-    "react": "19.2.3",
-    "react-color": "^2.19.3",
-    "react-dom": "19.2.3",
-    "recharts": "^3.7.0",
-    "firebase-frameworks": "^0.11.0",
-    "firebase-functions": "^6.0.1",
-    "firebase-admin": "^11.11.1"
+    "firebase-admin": "^12.0.0",
+    "firebase-functions": "^5.0.0"
   },
-  "main": "server.js"
+  "private": true
 }
-[debug] [2026-01-26T04:07:55.129Z] Building nodejs source
-[info] i  functions: Loading and analyzing source code for codebase firebase-frameworks-netsystemsdc-1d977 to determine what to deploy 
-[debug] [2026-01-26T04:07:55.130Z] Could not find functions.yaml. Must use http discovery
-[debug] [2026-01-26T04:07:55.138Z] Found firebase-functions binary at 'C:\Users\netpr\OneDrive\Documentos\NetSystemsDc\Web App\.firebase\netsystemsdc-1d977\functions\node_modules\.bin\firebase-functions'
-[info] Serving at port 8508
+[debug] [2026-01-26T05:01:38.744Z] Building nodejs source
+[info] i  functions: Loading and analyzing source code for codebase default to determine what to deploy 
+[debug] [2026-01-26T05:01:38.745Z] Could not find functions.yaml. Must use http discovery
+[debug] [2026-01-26T05:01:38.753Z] Found firebase-functions binary at 'C:\Users\netpr\OneDrive\Documentos\NetSystemsDc\Web App\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8034
 
-[debug] [2026-01-26T04:07:55.586Z] Got response from /__/functions.yaml {"endpoints":{"ssrnetsystemsdc1d977":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","region":["us-central1"],"labels":{},"httpsTrigger":{},"entryPoint":"ssrnetsystemsdc1d977"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2026-01-26T05:01:39.491Z] Got response from /__/functions.yaml {"endpoints":{"generateContent":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","region":["us-central1"],"secretEnvironmentVariables":[{"key":"{{ params.GEMINI_API_KEY }}"}],"labels":{},"callableTrigger":{},"entryPoint":"generateContent"},"chatAgent":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","region":["us-central1"],"secretEnvironmentVariables":[{"key":"{{ params.GEMINI_API_KEY }}"}],"labels":{},"callableTrigger":{},"entryPoint":"chatAgent"},"generateBlogContent":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","region":["us-central1"],"secretEnvironmentVariables":[{"key":"{{ params.GEMINI_API_KEY }}"}],"labels":{},"callableTrigger":{},"entryPoint":"generateBlogContent"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{},"params":[{"name":"GEMINI_API_KEY","type":"string"}]}
 [info] i  extensions: ensuring required API firebaseextensions.googleapis.com is enabled... 
-[debug] [2026-01-26T04:07:59.622Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2026-01-26T04:07:59.622Z] > authorizing via signed-in user (startup@creativa.rocks)
-[debug] [2026-01-26T04:07:59.622Z] [iam] checking project netsystemsdc-1d977 for permissions ["firebase.projects.get","firebaseextensions.instances.list"]
-[debug] [2026-01-26T04:07:59.622Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:07:59.622Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:07:59.622Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/netsystemsdc-1d977:testIamPermissions [none]
-[debug] [2026-01-26T04:07:59.622Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/netsystemsdc-1d977:testIamPermissions x-goog-quota-user=projects/netsystemsdc-1d977
-[debug] [2026-01-26T04:07:59.622Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/netsystemsdc-1d977:testIamPermissions {"permissions":["firebase.projects.get","firebaseextensions.instances.list"]}
-[debug] [2026-01-26T04:08:00.119Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/netsystemsdc-1d977:testIamPermissions 200
-[debug] [2026-01-26T04:08:00.119Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/netsystemsdc-1d977:testIamPermissions {"permissions":["firebase.projects.get","firebaseextensions.instances.list"]}
-[debug] [2026-01-26T04:08:00.119Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:08:00.120Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:08:00.120Z] >>> [apiv2][query] GET https://firebaseextensions.googleapis.com/v1beta/projects/netsystemsdc-1d977/instances pageSize=100&pageToken=
-[debug] [2026-01-26T04:08:01.001Z] <<< [apiv2][status] GET https://firebaseextensions.googleapis.com/v1beta/projects/netsystemsdc-1d977/instances 200
-[debug] [2026-01-26T04:08:01.002Z] <<< [apiv2][body] GET https://firebaseextensions.googleapis.com/v1beta/projects/netsystemsdc-1d977/instances {}
-[info] i  functions: Loaded environment variables from .env. 
-[info] i  functions: preparing .firebase\netsystemsdc-1d977\functions directory for uploading... 
-[info] i  functions: packaged C:\Users\netpr\OneDrive\Documentos\NetSystemsDc\Web App\.firebase\netsystemsdc-1d977\functions (572.88 MB) for uploading 
-[debug] [2026-01-26T04:08:26.156Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:08:26.156Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:08:26.156Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/projects/netsystemsdc-1d977/locations/-/functions [none]
-[debug] [2026-01-26T04:08:27.267Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/projects/netsystemsdc-1d977/locations/-/functions 200
-[debug] [2026-01-26T04:08:27.267Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/projects/netsystemsdc-1d977/locations/-/functions {"functions":[{"name":"projects/netsystemsdc-1d977/locations/us-central1/functions/onNewLead","eventTrigger":{"eventType":"providers/cloud.firestore/eventTypes/document.create","resource":"projects/netsystemsdc-1d977/databases/(default)/documents/leads/{leadId}","service":"firestore.googleapis.com","failurePolicy":{}},"status":"OFFLINE","entryPoint":"onNewLead","timeout":"60s","availableMemoryMb":256,"serviceAccountEmail":"netsystemsdc-1d977@appspot.gserviceaccount.com","updateTime":"2026-01-22T02:19:39.769576180Z","versionId":"4","labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"9184af7fdd1889a260872321fcaa3f8ae9000bf1"},"sourceUploadUrl":"https://storage.googleapis.com/uploads-405035359646.us-central1.cloudfunctions.appspot.com/d258ae75-53b0-48d8-82ef-60d8fb410295.zip","environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"netsystemsdc-1d977\",\"storageBucket\":\"netsystemsdc-1d977.firebasestorage.app\"}","GCLOUD_PROJECT":"netsystemsdc-1d977","EVENTARC_CLOUD_EVENT_SOURCE":"projects/netsystemsdc-1d977/locations/us-central1/functions/onNewLead"},"runtime":"nodejs20","maxInstances":3000,"ingressSettings":"ALLOW_ALL","buildId":"cca11484-92f4-44d1-b940-7bc84374b56b","buildEnvironmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"buildName":"projects/133124262183/locations/us-central1/builds/cca11484-92f4-44d1-b940-7bc84374b56b","dockerRegistry":"ARTIFACT_REGISTRY","automaticUpdatePolicy":{},"buildServiceAccount":"projects/netsystemsdc-1d977/serviceAccounts/133124262183-compute@developer.gserviceaccount.com","satisfiesPzi":true}]}
-[debug] [2026-01-26T04:08:27.267Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:08:27.267Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:08:27.268Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/netsystemsdc-1d977/locations/-/functions filter=environment%3D%22GEN_2%22
-[debug] [2026-01-26T04:08:27.858Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/netsystemsdc-1d977/locations/-/functions 200
-[debug] [2026-01-26T04:08:27.858Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/netsystemsdc-1d977/locations/-/functions {"functions":[{"name":"projects/netsystemsdc-1d977/locations/us-central1/functions/ssrnetsystemsdc1d977","buildConfig":{"build":"projects/133124262183/locations/us-central1/builds/2d1c7bfa-b886-4866-ae3d-a995bc7af360","runtime":"nodejs24","entryPoint":"ssrnetsystemsdc1d977","source":{"storageSource":{"bucket":"gcf-v2-sources-133124262183-us-central1","object":"ssrnetsystemsdc1d977/function-source.zip","generation":"1769048353812849"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRepository":"projects/netsystemsdc-1d977/locations/us-central1/repositories/gcf-artifacts","sourceProvenance":{"resolvedStorageSource":{"bucket":"gcf-v2-sources-133124262183-us-central1","object":"ssrnetsystemsdc1d977/function-source.zip","generation":"1769048353812849"}},"dockerRegistry":"ARTIFACT_REGISTRY","serviceAccount":"projects/netsystemsdc-1d977/serviceAccounts/133124262183-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"state":"UNKNOWN","updateTime":"2026-01-26T03:32:09.785721802Z","labels":{"firebase-functions-codebase":"firebase-frameworks-netsystemsdc-1d977","firebase-functions-hash":"e4bf74b3f3df697d37fa12111351fe5163a01144","deployment-tool":"cli-firebase"},"stateMessages":[{"severity":"ERROR","type":"CloudRunServiceNotFound","message":"Cloud Run service projects/netsystemsdc-1d977/locations/us-central1/services/ssrnetsystemsdc1d977 for the function was not found. The function will not work correctly. Please redeploy."}],"environment":"GEN_2","url":"https://us-central1-netsystemsdc-1d977.cloudfunctions.net/ssrnetsystemsdc1d977","createTime":"2026-01-22T02:19:14.098454392Z","satisfiesPzi":true}]}
-[info] i  functions: ensuring required API run.googleapis.com is enabled... 
-[info] i  functions: ensuring required API eventarc.googleapis.com is enabled... 
-[info] i  functions: ensuring required API pubsub.googleapis.com is enabled... 
-[info] i  functions: ensuring required API storage.googleapis.com is enabled... 
-[info] i  functions: generating the service identity for pubsub.googleapis.com... 
-[debug] [2026-01-26T04:08:27.862Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:08:27.863Z] Checked if tokens are valid: true, expires at: 1769403999138
-[info] i  functions: generating the service identity for eventarc.googleapis.com... 
-[debug] [2026-01-26T04:08:27.863Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:08:27.863Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:08:27.863Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1beta1/projects/133124262183/services/pubsub.googleapis.com:generateServiceIdentity [none]
-[debug] [2026-01-26T04:08:27.863Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1beta1/projects/133124262183/services/pubsub.googleapis.com:generateServiceIdentity x-goog-quota-user=projects/133124262183
-[debug] [2026-01-26T04:08:27.863Z] >>> [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/133124262183/services/pubsub.googleapis.com:generateServiceIdentity {}
-[debug] [2026-01-26T04:08:27.864Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1beta1/projects/133124262183/services/eventarc.googleapis.com:generateServiceIdentity [none]
-[debug] [2026-01-26T04:08:27.864Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1beta1/projects/133124262183/services/eventarc.googleapis.com:generateServiceIdentity x-goog-quota-user=projects/133124262183
-[debug] [2026-01-26T04:08:27.864Z] >>> [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/133124262183/services/eventarc.googleapis.com:generateServiceIdentity {}
-[debug] [2026-01-26T04:08:28.659Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1beta1/projects/133124262183/services/pubsub.googleapis.com:generateServiceIdentity 200
-[debug] [2026-01-26T04:08:28.659Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/133124262183/services/pubsub.googleapis.com:generateServiceIdentity {"name":"operations/finished.DONE_OPERATION","done":true,"response":{"@type":"type.googleapis.com/google.api.serviceusage.v1beta1.ServiceIdentity","email":"service-133124262183@gcp-sa-pubsub.iam.gserviceaccount.com","uniqueId":"113731815722193866129"}}
-[debug] [2026-01-26T04:08:28.665Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1beta1/projects/133124262183/services/eventarc.googleapis.com:generateServiceIdentity 200
-[debug] [2026-01-26T04:08:28.665Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/133124262183/services/eventarc.googleapis.com:generateServiceIdentity {"name":"operations/finished.DONE_OPERATION","done":true,"response":{"@type":"type.googleapis.com/google.api.serviceusage.v1beta1.ServiceIdentity","email":"service-133124262183@gcp-sa-eventarc.iam.gserviceaccount.com","uniqueId":"100205863664452245384"}}
-[debug] [2026-01-26T04:08:28.667Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:08:28.667Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:08:28.667Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/netsystemsdc-1d977 [none]
-[debug] [2026-01-26T04:08:29.201Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/netsystemsdc-1d977 200
-[debug] [2026-01-26T04:08:29.201Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/projects/netsystemsdc-1d977 {"projectNumber":"133124262183","projectId":"netsystemsdc-1d977","lifecycleState":"ACTIVE","name":"NetSystemsDc","labels":{"firebase":"enabled","firebase-core":"disabled"},"createTime":"2026-01-21T18:33:46.696764Z","parent":{"type":"organization","id":"434183839080"}}
-[debug] [2026-01-26T04:08:29.201Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:08:29.201Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:08:29.201Z] >>> [apiv2][query] GET https://compute.googleapis.com/compute/v1/projects/133124262183 [none]
-[debug] [2026-01-26T04:08:29.634Z] <<< [apiv2][status] GET https://compute.googleapis.com/compute/v1/projects/133124262183 403
-[debug] [2026-01-26T04:08:29.634Z] <<< [apiv2][body] GET https://compute.googleapis.com/compute/v1/projects/133124262183 {"error":{"code":403,"message":"Compute Engine API has not been used in project 133124262183 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=133124262183 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.","errors":[{"message":"Compute Engine API has not been used in project 133124262183 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=133124262183 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.","domain":"usageLimits","reason":"accessNotConfigured","extendedHelp":"https://console.developers.google.com"}],"status":"PERMISSION_DENIED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"SERVICE_DISABLED","domain":"googleapis.com","metadata":{"serviceTitle":"Compute Engine API","containerInfo":"133124262183","service":"compute.googleapis.com","activationUrl":"https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=133124262183","consumer":"projects/133124262183"}},{"@type":"type.googleapis.com/google.rpc.LocalizedMessage","locale":"en-US","message":"Compute Engine API has not been used in project 133124262183 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=133124262183 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Google developers console API activation","url":"https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=133124262183"}]}]}}
-[debug] [2026-01-26T04:08:29.635Z] unable to look up default compute service account. Falling back to 133124262183-compute@developer.gserviceaccount.com. Error: {"name":"FirebaseError","children":[],"context":{"body":{"error":{"code":403,"message":"Compute Engine API has not been used in project 133124262183 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=133124262183 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.","errors":[{"message":"Compute Engine API has not been used in project 133124262183 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=133124262183 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.","domain":"usageLimits","reason":"accessNotConfigured","extendedHelp":"https://console.developers.google.com"}],"status":"PERMISSION_DENIED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"SERVICE_DISABLED","domain":"googleapis.com","metadata":{"serviceTitle":"Compute Engine API","containerInfo":"133124262183","service":"compute.googleapis.com","activationUrl":"https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=133124262183","consumer":"projects/133124262183"}},{"@type":"type.googleapis.com/google.rpc.LocalizedMessage","locale":"en-US","message":"Compute Engine API has not been used in project 133124262183 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=133124262183 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Google developers console API activation","url":"https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=133124262183"}]}]}},"response":{"statusCode":403}},"exit":1,"message":"Request to https://compute.googleapis.com/compute/v1/projects/133124262183 had HTTP Error: 403, Compute Engine API has not been used in project 133124262183 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=133124262183 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.","status":403}
-[debug] [2026-01-26T04:08:29.635Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:08:29.635Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:08:29.635Z] >>> [apiv2][query] GET https://compute.googleapis.com/compute/v1/projects/133124262183 [none]
-[debug] [2026-01-26T04:08:29.818Z] <<< [apiv2][status] GET https://compute.googleapis.com/compute/v1/projects/133124262183 403
-[debug] [2026-01-26T04:08:29.818Z] <<< [apiv2][body] GET https://compute.googleapis.com/compute/v1/projects/133124262183 {"error":{"code":403,"message":"Compute Engine API has not been used in project 133124262183 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=133124262183 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.","errors":[{"message":"Compute Engine API has not been used in project 133124262183 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=133124262183 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.","domain":"usageLimits","reason":"accessNotConfigured","extendedHelp":"https://console.developers.google.com"}],"status":"PERMISSION_DENIED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"SERVICE_DISABLED","domain":"googleapis.com","metadata":{"serviceTitle":"Compute Engine API","service":"compute.googleapis.com","containerInfo":"133124262183","consumer":"projects/133124262183","activationUrl":"https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=133124262183"}},{"@type":"type.googleapis.com/google.rpc.LocalizedMessage","locale":"en-US","message":"Compute Engine API has not been used in project 133124262183 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=133124262183 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Google developers console API activation","url":"https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=133124262183"}]}]}}
-[debug] [2026-01-26T04:08:29.818Z] unable to look up default compute service account. Falling back to 133124262183-compute@developer.gserviceaccount.com. Error: {"name":"FirebaseError","children":[],"context":{"body":{"error":{"code":403,"message":"Compute Engine API has not been used in project 133124262183 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=133124262183 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.","errors":[{"message":"Compute Engine API has not been used in project 133124262183 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=133124262183 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.","domain":"usageLimits","reason":"accessNotConfigured","extendedHelp":"https://console.developers.google.com"}],"status":"PERMISSION_DENIED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"SERVICE_DISABLED","domain":"googleapis.com","metadata":{"serviceTitle":"Compute Engine API","service":"compute.googleapis.com","containerInfo":"133124262183","consumer":"projects/133124262183","activationUrl":"https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=133124262183"}},{"@type":"type.googleapis.com/google.rpc.LocalizedMessage","locale":"en-US","message":"Compute Engine API has not been used in project 133124262183 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=133124262183 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Google developers console API activation","url":"https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=133124262183"}]}]}},"response":{"statusCode":403}},"exit":1,"message":"Request to https://compute.googleapis.com/compute/v1/projects/133124262183 had HTTP Error: 403, Compute Engine API has not been used in project 133124262183 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=133124262183 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.","status":403}
-[info] i  firestore: ensuring required API firestore.googleapis.com is enabled... 
-[info] i  firestore: ensuring required API firestore.googleapis.com is enabled... 
-[debug] [2026-01-26T04:08:29.821Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:08:29.821Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:08:29.821Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/netsystemsdc-1d977/databases/(default) [none]
-[debug] [2026-01-26T04:08:30.580Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/netsystemsdc-1d977/databases/(default) 200
-[debug] [2026-01-26T04:08:30.580Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/netsystemsdc-1d977/databases/(default) {"name":"projects/netsystemsdc-1d977/databases/(default)","uid":"eb67ef6e-ce08-44ab-a758-bdd1197acf51","createTime":"2026-01-21T18:48:48.579859Z","updateTime":"2026-01-21T18:48:48.579859Z","locationId":"nam5","type":"FIRESTORE_NATIVE","concurrencyMode":"PESSIMISTIC","versionRetentionPeriod":"3600s","earliestVersionTime":"2026-01-26T03:08:29.871714Z","appEngineIntegrationMode":"DISABLED","keyPrefix":"s","pointInTimeRecoveryEnablement":"POINT_IN_TIME_RECOVERY_DISABLED","deleteProtectionState":"DELETE_PROTECTION_DISABLED","databaseEdition":"STANDARD","freeTier":true,"realtimeUpdatesMode":"REALTIME_UPDATES_MODE_ENABLED","etag":"ILjn7MaqqJIDMM2Ss9GxnZID"}
-[info] i  firestore: reading indexes from firestore.indexes.json... 
-[info] i  cloud.firestore: checking firestore.rules for compilation errors... 
-[debug] [2026-01-26T04:08:30.584Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:08:30.584Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:08:30.584Z] >>> [apiv2][query] POST https://firebaserules.googleapis.com/v1/projects/netsystemsdc-1d977:test [none]
-[debug] [2026-01-26T04:08:30.584Z] >>> [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/netsystemsdc-1d977:test [omitted]
-[debug] [2026-01-26T04:08:30.967Z] <<< [apiv2][status] POST https://firebaserules.googleapis.com/v1/projects/netsystemsdc-1d977:test 200
-[debug] [2026-01-26T04:08:30.968Z] <<< [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/netsystemsdc-1d977:test {}
-[info] +  cloud.firestore: rules file firestore.rules compiled successfully 
-[debug] [2026-01-26T04:08:30.971Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:08:30.971Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:08:30.971Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/netsystemsdc-1d977/versions [none]
-[debug] [2026-01-26T04:08:30.971Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/netsystemsdc-1d977/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase","firebase-web-framework":"next_ssr"}}
-[debug] [2026-01-26T04:08:31.916Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/netsystemsdc-1d977/versions 200
-[debug] [2026-01-26T04:08:31.916Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/netsystemsdc-1d977/versions {"name":"projects/133124262183/sites/netsystemsdc-1d977/versions/b077f6a8cb8cd779","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase","firebase-web-framework":"next_ssr"}}
-[debug] [2026-01-26T04:08:31.917Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:08:31.917Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:08:31.917Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/netsystemsdc-1d977/billingInfo [none]
-[debug] [2026-01-26T04:08:32.425Z] <<< [apiv2][status] GET https://cloudbilling.googleapis.com/v1/projects/netsystemsdc-1d977/billingInfo 200
-[debug] [2026-01-26T04:08:32.425Z] <<< [apiv2][body] GET https://cloudbilling.googleapis.com/v1/projects/netsystemsdc-1d977/billingInfo {"name":"projects/netsystemsdc-1d977/billingInfo","projectId":"netsystemsdc-1d977","billingAccountName":"billingAccounts/0105DB-CF3A23-4F6766","billingEnabled":true}
-[debug] [2026-01-26T04:08:32.426Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:08:32.427Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:08:32.427Z] >>> [apiv2][query] POST https://cloudfunctions.googleapis.com/v2/projects/netsystemsdc-1d977/locations/us-central1/functions:generateUploadUrl [none]
-[debug] [2026-01-26T04:08:32.660Z] <<< [apiv2][status] POST https://cloudfunctions.googleapis.com/v2/projects/netsystemsdc-1d977/locations/us-central1/functions:generateUploadUrl 200
-[debug] [2026-01-26T04:08:32.660Z] <<< [apiv2][body] POST https://cloudfunctions.googleapis.com/v2/projects/netsystemsdc-1d977/locations/us-central1/functions:generateUploadUrl {"uploadUrl":"https://storage.googleapis.com/gcf-v2-uploads-133124262183.us-central1.cloudfunctions.appspot.com/52a0d56a-db8a-4f4d-b66b-58c9993cb317.zip?GoogleAccessId=service-133124262183@gcf-admin-robot.iam.gserviceaccount.com&Expires=1769402311&Signature=pTOwSbFya%2FYC74gg0vsguh1PR8lTtK1GVyYgN%2FuqvrRoIKXx1OXs%2Fsi611qYV4RqfYzefazmFQPF5eQofDSHH4ny%2BxpsBPCQooSogk9tnj%2Fax1me97RN3hmvUZuXlTX6dfdXv19MSht8rMhJ9%2B4Ov5%2FenSINPSPTF9yuKChTaT7VDikaCYvgeRyMmfuZMyOqSfdi4gqGs1x33IqfpFq98%2BDN%2Bp28p53OXWZXA5k6Ryb94FPqanlOwTowKcUzSWTpVe4qEGCTj2LlhB%2FyJLc0DF9CuwKh3EI4eTmy7i%2BDhPmF%2FLzjfpa%2BTbDERrgNA%2BtK%2BpWN%2B6jpuqzj%2FL0i6VnDaA%3D%3D","storageSource":{"bucket":"gcf-v2-uploads-133124262183.us-central1.cloudfunctions.appspot.com","object":"52a0d56a-db8a-4f4d-b66b-58c9993cb317.zip"}}
-[debug] [2026-01-26T04:08:32.663Z] >>> [apiv2][query] PUT https://storage.googleapis.com/gcf-v2-uploads-133124262183.us-central1.cloudfunctions.appspot.com/52a0d56a-db8a-4f4d-b66b-58c9993cb317.zip GoogleAccessId=service-133124262183%40gcf-admin-robot.iam.gserviceaccount.com&Expires=1769402311&Signature=pTOwSbFya%2FYC74gg0vsguh1PR8lTtK1GVyYgN%2FuqvrRoIKXx1OXs%2Fsi611qYV4RqfYzefazmFQPF5eQofDSHH4ny%2BxpsBPCQooSogk9tnj%2Fax1me97RN3hmvUZuXlTX6dfdXv19MSht8rMhJ9%2B4Ov5%2FenSINPSPTF9yuKChTaT7VDikaCYvgeRyMmfuZMyOqSfdi4gqGs1x33IqfpFq98%2BDN%2Bp28p53OXWZXA5k6Ryb94FPqanlOwTowKcUzSWTpVe4qEGCTj2LlhB%2FyJLc0DF9CuwKh3EI4eTmy7i%2BDhPmF%2FLzjfpa%2BTbDERrgNA%2BtK%2BpWN%2B6jpuqzj%2FL0i6VnDaA%3D%3D
-[debug] [2026-01-26T04:08:32.663Z] >>> [apiv2][body] PUT https://storage.googleapis.com/gcf-v2-uploads-133124262183.us-central1.cloudfunctions.appspot.com/52a0d56a-db8a-4f4d-b66b-58c9993cb317.zip [stream]
-[debug] [2026-01-26T04:10:22.906Z] <<< [apiv2][status] PUT https://storage.googleapis.com/gcf-v2-uploads-133124262183.us-central1.cloudfunctions.appspot.com/52a0d56a-db8a-4f4d-b66b-58c9993cb317.zip 200
-[debug] [2026-01-26T04:10:22.906Z] <<< [apiv2][body] PUT https://storage.googleapis.com/gcf-v2-uploads-133124262183.us-central1.cloudfunctions.appspot.com/52a0d56a-db8a-4f4d-b66b-58c9993cb317.zip [omitted]
-[info] +  functions: .firebase\netsystemsdc-1d977\functions source uploaded successfully 
-[debug] [2026-01-26T04:10:22.908Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:10:22.908Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:10:22.909Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/netsystemsdc-1d977/releases pageSize=10&pageToken=
-[debug] [2026-01-26T04:10:23.171Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/netsystemsdc-1d977/releases 200
-[debug] [2026-01-26T04:10:23.171Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/netsystemsdc-1d977/releases {"releases":[{"name":"projects/netsystemsdc-1d977/releases/cloud.firestore","rulesetName":"projects/netsystemsdc-1d977/rulesets/015f25e4-55e5-4bf1-9986-8301685985d7","createTime":"2026-01-21T18:48:51.475400Z","updateTime":"2026-01-25T22:47:40.655145Z"},{"name":"projects/netsystemsdc-1d977/releases/firebase.storage/netsystemsdc-1d977.firebasestorage.app","rulesetName":"projects/netsystemsdc-1d977/rulesets/c83de43c-1140-4375-9f27-8947ee1aa6e5","createTime":"2026-01-23T05:00:26.170874Z","updateTime":"2026-01-23T05:00:26.170874Z"}]}
-[debug] [2026-01-26T04:10:23.179Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:10:23.179Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:10:23.179Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/netsystemsdc-1d977/rulesets/015f25e4-55e5-4bf1-9986-8301685985d7 [none]
-[debug] [2026-01-26T04:10:23.315Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/netsystemsdc-1d977/rulesets/015f25e4-55e5-4bf1-9986-8301685985d7 200
-[debug] [2026-01-26T04:10:23.315Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/netsystemsdc-1d977/rulesets/015f25e4-55e5-4bf1-9986-8301685985d7 [omitted]
-[info] i  firestore: latest version of firestore.rules already up to date, skipping upload... 
-[info] i  firestore: deploying indexes... 
-[debug] [2026-01-26T04:10:23.316Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:10:23.317Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:10:23.317Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/netsystemsdc-1d977/databases/(default)/collectionGroups/-/indexes [none]
-[debug] [2026-01-26T04:10:24.096Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/netsystemsdc-1d977/databases/(default)/collectionGroups/-/indexes 200
-[debug] [2026-01-26T04:10:24.096Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/netsystemsdc-1d977/databases/(default)/collectionGroups/-/indexes {}
-[debug] [2026-01-26T04:10:24.096Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:10:24.096Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:10:24.096Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/netsystemsdc-1d977/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* [none]
-[debug] [2026-01-26T04:10:24.257Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/netsystemsdc-1d977/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* 200
-[debug] [2026-01-26T04:10:24.257Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/netsystemsdc-1d977/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* {"fields":[{"name":"projects/netsystemsdc-1d977/databases/(default)/collectionGroups/__default__/fields/*","indexConfig":{"indexes":[{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","order":"ASCENDING"}],"state":"READY"},{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","order":"DESCENDING"}],"state":"READY"},{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","arrayConfig":"CONTAINS"}],"state":"READY"}]}}]}
-[debug] [2026-01-26T04:10:24.257Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:10:24.257Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:10:24.257Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/netsystemsdc-1d977/databases/(default) [none]
-[debug] [2026-01-26T04:10:24.400Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/netsystemsdc-1d977/databases/(default) 200
-[debug] [2026-01-26T04:10:24.401Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/netsystemsdc-1d977/databases/(default) {"name":"projects/netsystemsdc-1d977/databases/(default)","uid":"eb67ef6e-ce08-44ab-a758-bdd1197acf51","createTime":"2026-01-21T18:48:48.579859Z","updateTime":"2026-01-21T18:48:48.579859Z","locationId":"nam5","type":"FIRESTORE_NATIVE","concurrencyMode":"PESSIMISTIC","versionRetentionPeriod":"3600s","earliestVersionTime":"2026-01-26T03:10:23.691944Z","appEngineIntegrationMode":"DISABLED","keyPrefix":"s","pointInTimeRecoveryEnablement":"POINT_IN_TIME_RECOVERY_DISABLED","deleteProtectionState":"DELETE_PROTECTION_DISABLED","databaseEdition":"STANDARD","freeTier":true,"realtimeUpdatesMode":"REALTIME_UPDATES_MODE_ENABLED","etag":"IPXrj/2qqJIDMM2Ss9GxnZID"}
-[info] +  firestore: deployed indexes in firestore.indexes.json successfully for (default) database 
-[info] i  hosting[netsystemsdc-1d977]: beginning deploy... 
-[info] i  hosting[netsystemsdc-1d977]: found 63 files in .firebase\netsystemsdc-1d977\hosting 
-[debug] [2026-01-26T04:10:24.417Z] [hosting] uploading with 200 concurrency
-[debug] [2026-01-26T04:10:24.417Z] [hosting] hash cache [LmZpcmViYXNlXG5ldHN5c3RlbXNkYy0xZDk3N1xob3N0aW5n] not populated
-[debug] [2026-01-26T04:10:24.466Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:10:24.466Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:10:24.468Z] [hosting] hash cache [LmZpcmViYXNlXG5ldHN5c3RlbXNkYy0xZDk3N1xob3N0aW5n] stored for 63 files
-[debug] [2026-01-26T04:10:24.468Z] [hosting][hash queue][FINAL] {"max":41,"min":12,"avg":19.507936507936513,"active":0,"complete":63,"success":63,"errored":0,"retried":0,"total":63,"elapsed":48}
-[debug] [2026-01-26T04:10:24.469Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/133124262183/sites/netsystemsdc-1d977/versions/b077f6a8cb8cd779:populateFiles [none]
-[debug] [2026-01-26T04:10:24.469Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/133124262183/sites/netsystemsdc-1d977/versions/b077f6a8cb8cd779:populateFiles {"files":{"/window.svg":"6bd2003bd35bb32c1c0d99ab3aeac0cc1edaefd79f27df1d954bc87184048d74","/vercel.svg":"529a1a21b4a82475a82db26173c28d7b27e2dc9d4b900eaf1c5329d96eea4ddd","/file.svg":"5a09df6187e21aa9a7d05094389385876ac93c818e1dcbb77a26a8fe408bf79c","/_not-found.html":"c8ff43b41764ddbef4251a48acc30348298ea7781cfbfece9f9d2c08298de424","/globe.svg":"6502a3e6120bf2d6e8417e7c40bb57fb8a6954de9c86d3f43076a75b60cd23a2","/_global-error.html":"e4deea50964e0f2cd682c07a4cc7b581eebea46b92674076e3c9053fd2cfda48","/500.html":"e4deea50964e0f2cd682c07a4cc7b581eebea46b92674076e3c9053fd2cfda48","/admin.html":"9d5584c91100428e7988f7d22f1ffeea275d1e59cbabedc59a97860428a99c17","/404.html":"c8ff43b41764ddbef4251a48acc30348298ea7781cfbfece9f9d2c08298de424","/_next/static/media/8a480f0b521d4e75-s.8e0177b5.woff2":"8d292901989d49484a1601ca452e9a5867e0bb875ea47ebe965cce34f9ccfe9f","/next.svg":"0665b9ab4493aa9d7e988b57024e28772ae543e804b8cf6b0a3633854b7c3c7f","/_next/static/jdXVjiG-b_-lVeU9emk8Z/_ssgManifest.js":"916051c5092ead2810e8ce587a6cc0bad4933de831cf06c5534e94dc97c50166","/_next/static/jdXVjiG-b_-lVeU9emk8Z/_buildManifest.js":"dcbe1c9b9159ca21caea98e1bad364012ae284e9551375ca62b83d2811efac91","/_next/static/jdXVjiG-b_-lVeU9emk8Z/_clientMiddlewareManifest.json":"61663fde99b3394d71653f41c19fe91269442622a4a6695f8352a70fbf5ca4c1","/_next/static/chunks/ff1a16fafef87110.js":"1c5ce9de9f2087594a99c79ed2344979288c2efaeb57adf3aecb7d6c8dfa5bcf","/_next/static/media/bbc41e54d2fcbd21-s.799d8ef8.woff2":"d4009d939263227ebf50c0795c481e213f357d7420c6e2aeae9e270341c2794e","/favicon.ico":"36eaaa9259cda5765c4061fa8b7bf61c74dbda3a2a721a0811c73f5dae61a2e9","/_next/static/media/4fa387ec64143e14-s.c1fdd6c2.woff2":"b69bc48415f924b2ba601fc1d4e410378fafb8b8835d133b888e023e782ae276","/_next/static/chunks/fd322d7bf26e3a1f.js":"35893744a10b55f995745109f3532e95f004b3de7db540be77b06ba5e19ed46c","/_next/static/chunks/turbopack-c2345635fe1d8c2a.js":"580e21e3ab0a32f2f35beec59696ddd328d51c5f2656c3ee393c3312ab5c82ca","/_next/static/chunks/e739bb365d7923ec.js":"c646dabb611fc5a36354104e3ce8edafbad35ceb18f08a219ae792671753531b","/_next/static/chunks/eee93b3e8aa85e81.js":"6516aa7f18fb3c0069248c519b1f88f6990fd7260bd974f650a9bacee4b0b631","/_next/static/media/favicon.0b3bf435.ico":"36eaaa9259cda5765c4061fa8b7bf61c74dbda3a2a721a0811c73f5dae61a2e9","/_next/static/chunks/d56bb79eaceb4dcd.js":"e9590bd62a0287780f1eb76deff529a1486c75ca20447b1c910a13fa01b6d1af","/_next/static/media/7178b3e590c64307-s.b97b3418.woff2":"2435c9cd3d80b370af0d12f1623ee96c47460d286fa4e52e283371b801696fe6","/_next/static/chunks/ba7d829fac234c43.js":"b0861721def46fb26d3a77899d82d165e283ab0bdc159dd49588a36fdd9d7594","/_next/static/chunks/82abf2d65f5428ae.js":"2021b9986fad2bc6b3850d917a70ccb0ba7b75d1490468deef3d46a3d1349e2a","/_next/static/chunks/61cc43b3d7ad2990.js":"fa05d02a7d956a0f10d9dcd69fffeb260f1bd0fbdc71534cd6bea57d3ce8d229","/_next/static/chunks/986bc6023d187c39.js":"9247364cef81276e1ac1e7093a62a91a508a950f46f8f9cfc72ddad1eec5a3ce","/_next/static/chunks/64ddd8fb984615ce.js":"713251bc9a52889159acf1b70859da047ed8fdbd7ab3080d0f93c7b4ba903428","/_next/static/chunks/4233e36711e9a2fb.js":"37d4b753ab6a833020969946a709554d5bc1258195a8d545132c81ecca5b83df","/_next/static/chunks/40f187b288a538f4.js":"416aef9ea930ef2354e3d365d56789d38cf7ee17a9d67bb7553e6497ac3a0ebf","/_next/static/chunks/3a2a6e4555d409dd.js":"d67787a90f2fb95441b792b60dfcd8aea55b6bc73e472d45172b1891297805db","/_next/static/chunks/31e4301910bb7642.js":"1dcec79ead3b0bb63d71141c3edd4f06e80702c2473c11deb675ea551f5761d9","/_next/static/chunks/14e33863d5a07894.js":"1eda8f4f86814dd4ddf44337f0005e3701db2142be2406a595687a9bbef79e3e","/_next/static/chunks/250e7d9efb60ea12.js":"26b87ffd8a4e995681b568fbf7e1ccf8b0f232365414a5f87cbb1f2466bcd214","/_next/static/chunks/38bfebc02cd9f77a.js":"c2f2bd8e1079499e2019cb903648a0c5fd704fa980c8779019a4aa088f1fef68","/_next/static/chunks/0b947afd79a8f47d.js":"6fa7265041733e032767654a2655fb42e904ffad0df2dfb41e8732b29c78705e","/_next/static/chunks/1be8765bf443d839.js":"582bcb2a92a4dd266dea4dbff32854774796ffbe75ce15b34cc2d8f654be8a64","/_next/static/media/caa3a2e1cccd8315-s.p.853070df.woff2":"b8beb80fe637dcc578d27d7e150cdee79a0b23985b81868ca8ddd974f26ac166","/_next/static/media/797e433ab948586e-s.p.dbea232f.woff2":"b64ce94058db3b6558b284f93ad64afaddc35ee2ff5e53ce48b833ff3a74e820","/_next/static/chunks/dddcc597dea8854c.css":"3805e19987c535704bd2a236b4f8ac9b50c26b50022833689bea771880295c30","/_next/static/chunks/42b913f144fe1bab.js":"9bc1739e44855f6bdf82004ad14d52b425432998ef241c57e66a706a2dd7a380","/_next/static/chunks/a77e9a51881421e3.js":"17143dd2a300695d939e5b1d12033f6d96b8d0900095af05e2c00b5cfde843c6","/_next/static/chunks/a6dad97d9634a72d.js.map":"25ae05f2ece4bc46d2351a2660b3f4347f1adc4181c38f3f596f60ccd615db6f","/_next/static/chunks/a6dad97d9634a72d.js":"18e28d3214eda45048d80d3925ea7627b809e69ad2e95f7f98459e9146a61c3d","/_next/static/chunks/038a077d717bccd9.js":"8269a2436a025720378470101465d37c9f8aa925b948bd4fdbfdb67ad4d1d5ac","/admin/settings.html":"94951301a284ee940c73186e0296358394b12b417f1c46d75c612b8233ecfc4b","/admin/seo.html":"d77e6ba7dcf347dc9fde2c8c8581697707d0369137d617904521dd9a7d90d61e","/admin/login.html":"6d9ccb669e34e22c3e2e1f346f53b7f7e81d941c59e19aff9f059386e2794445","/admin/leads.html":"89df296ce5117b61351394e1359018b742e0429058f038f5ea71f20d4c0fde5c","/admin/lab.html":"203af559f46ebd39da54a3f966e5d62d39c8822d51c7f9c0af0ea772570d403c","/admin/content.html":"4ac64a2eb61b6d5d5f5a6b822ac6d0723e85754d115a3368059f4ecd0a49948d","/admin/chat.html":"5cc36987b98480f1f509fc646ab77454821bb80800755da47b379486683a33bd","/_next/static/chunks/32568c2db1d0425c.js":"ce33062c05c3fe8ccf942a5ea283ac61b9b6ad42f13b99989b40644cfbc88374","/blog/tecnología/el-top-de-gamers-que-revolucionan-el-marketing-digital-influencia-engagement-y-estrategias-para-tu-marca.html":"ce2c4c9022197f4e5ae1bf3498c4dbef44e9c86ac93052b231918620fae2cfa9","/_next/static/chunks/3b9ec01ae6d8d22c.js":"8ce3731f2a156fa235b74d4165256a6b8dd788f997f7f48d471fe8b37a937ee3","/images/logo-creativa.png":"54ac0151ae944036807fbc8265eb80bea2d412ef1082185df4a73762c941d226","/images/Ejemplo Frontend Admin.webp":"2aaeb1221f9c9485e6c93e84dca49d994710aba773643e6888dc99c00a830a26","/_next/static/chunks/e6098bb34f3d9626.js":"af771c4e06f5269b9ccd08280ffe302ee187b159dceb92b71e62c32ac0a177eb","/images/Ejemplo Frontend.webp":"3a867ea88e452f19b52ceb5f916611d492234f9a195e10900fd493cad1abe7e9","/_next/static/chunks/03c52a322466f16f.js":"9dbc71b39b2f32d3d4e269b5f505e78388202325529cf8587b201b0200fe8e2a","/_next/static/chunks/71cc59b5e19c49c5.js":"a64d255086261b2035a05486d01c1b1afaa52785f7b585a0ef664de81c7218a4"}}
-[debug] [2026-01-26T04:10:25.259Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/133124262183/sites/netsystemsdc-1d977/versions/b077f6a8cb8cd779:populateFiles 200
-[debug] [2026-01-26T04:10:25.259Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/133124262183/sites/netsystemsdc-1d977/versions/b077f6a8cb8cd779:populateFiles {"uploadRequiredHashes":["5cc36987b98480f1f509fc646ab77454821bb80800755da47b379486683a33bd","d77e6ba7dcf347dc9fde2c8c8581697707d0369137d617904521dd9a7d90d61e","e4deea50964e0f2cd682c07a4cc7b581eebea46b92674076e3c9053fd2cfda48","9d5584c91100428e7988f7d22f1ffeea275d1e59cbabedc59a97860428a99c17","4ac64a2eb61b6d5d5f5a6b822ac6d0723e85754d115a3368059f4ecd0a49948d","c8ff43b41764ddbef4251a48acc30348298ea7781cfbfece9f9d2c08298de424","6d9ccb669e34e22c3e2e1f346f53b7f7e81d941c59e19aff9f059386e2794445","94951301a284ee940c73186e0296358394b12b417f1c46d75c612b8233ecfc4b","89df296ce5117b61351394e1359018b742e0429058f038f5ea71f20d4c0fde5c","ce2c4c9022197f4e5ae1bf3498c4dbef44e9c86ac93052b231918620fae2cfa9","203af559f46ebd39da54a3f966e5d62d39c8822d51c7f9c0af0ea772570d403c"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/netsystemsdc-1d977/versions/b077f6a8cb8cd779/files"}
-[debug] [2026-01-26T04:10:25.259Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:10:25.259Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:10:25.259Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:10:25.260Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:10:25.260Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:10:25.260Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:10:25.260Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:10:25.260Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:10:25.260Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:10:25.260Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:10:25.260Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:10:25.260Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:10:25.260Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:10:25.260Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:10:25.260Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:10:25.260Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:10:25.260Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:10:25.260Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:10:25.260Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:10:25.260Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:10:25.260Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:10:25.260Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:10:25.260Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/netsystemsdc-1d977/versions/b077f6a8cb8cd779/files/5cc36987b98480f1f509fc646ab77454821bb80800755da47b379486683a33bd [none]
-[debug] [2026-01-26T04:10:25.260Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/netsystemsdc-1d977/versions/b077f6a8cb8cd779/files/5cc36987b98480f1f509fc646ab77454821bb80800755da47b379486683a33bd [stream]
-[debug] [2026-01-26T04:10:25.261Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/netsystemsdc-1d977/versions/b077f6a8cb8cd779/files/d77e6ba7dcf347dc9fde2c8c8581697707d0369137d617904521dd9a7d90d61e [none]
-[debug] [2026-01-26T04:10:25.261Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/netsystemsdc-1d977/versions/b077f6a8cb8cd779/files/d77e6ba7dcf347dc9fde2c8c8581697707d0369137d617904521dd9a7d90d61e [stream]
-[debug] [2026-01-26T04:10:25.262Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/netsystemsdc-1d977/versions/b077f6a8cb8cd779/files/e4deea50964e0f2cd682c07a4cc7b581eebea46b92674076e3c9053fd2cfda48 [none]
-[debug] [2026-01-26T04:10:25.262Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/netsystemsdc-1d977/versions/b077f6a8cb8cd779/files/e4deea50964e0f2cd682c07a4cc7b581eebea46b92674076e3c9053fd2cfda48 [stream]
-[debug] [2026-01-26T04:10:25.263Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/netsystemsdc-1d977/versions/b077f6a8cb8cd779/files/9d5584c91100428e7988f7d22f1ffeea275d1e59cbabedc59a97860428a99c17 [none]
-[debug] [2026-01-26T04:10:25.263Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/netsystemsdc-1d977/versions/b077f6a8cb8cd779/files/9d5584c91100428e7988f7d22f1ffeea275d1e59cbabedc59a97860428a99c17 [stream]
-[debug] [2026-01-26T04:10:25.263Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/netsystemsdc-1d977/versions/b077f6a8cb8cd779/files/4ac64a2eb61b6d5d5f5a6b822ac6d0723e85754d115a3368059f4ecd0a49948d [none]
-[debug] [2026-01-26T04:10:25.263Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/netsystemsdc-1d977/versions/b077f6a8cb8cd779/files/4ac64a2eb61b6d5d5f5a6b822ac6d0723e85754d115a3368059f4ecd0a49948d [stream]
-[debug] [2026-01-26T04:10:25.264Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/netsystemsdc-1d977/versions/b077f6a8cb8cd779/files/c8ff43b41764ddbef4251a48acc30348298ea7781cfbfece9f9d2c08298de424 [none]
-[debug] [2026-01-26T04:10:25.264Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/netsystemsdc-1d977/versions/b077f6a8cb8cd779/files/c8ff43b41764ddbef4251a48acc30348298ea7781cfbfece9f9d2c08298de424 [stream]
-[debug] [2026-01-26T04:10:25.264Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/netsystemsdc-1d977/versions/b077f6a8cb8cd779/files/6d9ccb669e34e22c3e2e1f346f53b7f7e81d941c59e19aff9f059386e2794445 [none]
-[debug] [2026-01-26T04:10:25.264Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/netsystemsdc-1d977/versions/b077f6a8cb8cd779/files/6d9ccb669e34e22c3e2e1f346f53b7f7e81d941c59e19aff9f059386e2794445 [stream]
-[debug] [2026-01-26T04:10:25.265Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/netsystemsdc-1d977/versions/b077f6a8cb8cd779/files/94951301a284ee940c73186e0296358394b12b417f1c46d75c612b8233ecfc4b [none]
-[debug] [2026-01-26T04:10:25.265Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/netsystemsdc-1d977/versions/b077f6a8cb8cd779/files/94951301a284ee940c73186e0296358394b12b417f1c46d75c612b8233ecfc4b [stream]
-[debug] [2026-01-26T04:10:25.265Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/netsystemsdc-1d977/versions/b077f6a8cb8cd779/files/89df296ce5117b61351394e1359018b742e0429058f038f5ea71f20d4c0fde5c [none]
-[debug] [2026-01-26T04:10:25.265Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/netsystemsdc-1d977/versions/b077f6a8cb8cd779/files/89df296ce5117b61351394e1359018b742e0429058f038f5ea71f20d4c0fde5c [stream]
-[debug] [2026-01-26T04:10:25.266Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/netsystemsdc-1d977/versions/b077f6a8cb8cd779/files/ce2c4c9022197f4e5ae1bf3498c4dbef44e9c86ac93052b231918620fae2cfa9 [none]
-[debug] [2026-01-26T04:10:25.266Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/netsystemsdc-1d977/versions/b077f6a8cb8cd779/files/ce2c4c9022197f4e5ae1bf3498c4dbef44e9c86ac93052b231918620fae2cfa9 [stream]
-[debug] [2026-01-26T04:10:25.267Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/netsystemsdc-1d977/versions/b077f6a8cb8cd779/files/203af559f46ebd39da54a3f966e5d62d39c8822d51c7f9c0af0ea772570d403c [none]
-[debug] [2026-01-26T04:10:25.267Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/netsystemsdc-1d977/versions/b077f6a8cb8cd779/files/203af559f46ebd39da54a3f966e5d62d39c8822d51c7f9c0af0ea772570d403c [stream]
-[debug] [2026-01-26T04:10:25.268Z] [hosting][populate queue][FINAL] {"max":795,"min":795,"avg":795,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":803}
-[debug] [2026-01-26T04:10:25.268Z] [hosting] uploads queued: 11
-[debug] [2026-01-26T04:10:26.387Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/netsystemsdc-1d977/versions/b077f6a8cb8cd779/files/9d5584c91100428e7988f7d22f1ffeea275d1e59cbabedc59a97860428a99c17 200
-[debug] [2026-01-26T04:10:26.387Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/netsystemsdc-1d977/versions/b077f6a8cb8cd779/files/9d5584c91100428e7988f7d22f1ffeea275d1e59cbabedc59a97860428a99c17 [stream]
-[debug] [2026-01-26T04:10:26.388Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/netsystemsdc-1d977/versions/b077f6a8cb8cd779/files/ce2c4c9022197f4e5ae1bf3498c4dbef44e9c86ac93052b231918620fae2cfa9 200
-[debug] [2026-01-26T04:10:26.388Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/netsystemsdc-1d977/versions/b077f6a8cb8cd779/files/ce2c4c9022197f4e5ae1bf3498c4dbef44e9c86ac93052b231918620fae2cfa9 [stream]
-[debug] [2026-01-26T04:10:26.388Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/netsystemsdc-1d977/versions/b077f6a8cb8cd779/files/203af559f46ebd39da54a3f966e5d62d39c8822d51c7f9c0af0ea772570d403c 200
-[debug] [2026-01-26T04:10:26.388Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/netsystemsdc-1d977/versions/b077f6a8cb8cd779/files/203af559f46ebd39da54a3f966e5d62d39c8822d51c7f9c0af0ea772570d403c [stream]
-[debug] [2026-01-26T04:10:26.441Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/netsystemsdc-1d977/versions/b077f6a8cb8cd779/files/d77e6ba7dcf347dc9fde2c8c8581697707d0369137d617904521dd9a7d90d61e 200
-[debug] [2026-01-26T04:10:26.441Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/netsystemsdc-1d977/versions/b077f6a8cb8cd779/files/d77e6ba7dcf347dc9fde2c8c8581697707d0369137d617904521dd9a7d90d61e [stream]
-[debug] [2026-01-26T04:10:26.462Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/netsystemsdc-1d977/versions/b077f6a8cb8cd779/files/94951301a284ee940c73186e0296358394b12b417f1c46d75c612b8233ecfc4b 200
-[debug] [2026-01-26T04:10:26.462Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/netsystemsdc-1d977/versions/b077f6a8cb8cd779/files/94951301a284ee940c73186e0296358394b12b417f1c46d75c612b8233ecfc4b [stream]
-[debug] [2026-01-26T04:10:26.465Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/netsystemsdc-1d977/versions/b077f6a8cb8cd779/files/c8ff43b41764ddbef4251a48acc30348298ea7781cfbfece9f9d2c08298de424 200
-[debug] [2026-01-26T04:10:26.465Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/netsystemsdc-1d977/versions/b077f6a8cb8cd779/files/c8ff43b41764ddbef4251a48acc30348298ea7781cfbfece9f9d2c08298de424 [stream]
-[debug] [2026-01-26T04:10:26.466Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/netsystemsdc-1d977/versions/b077f6a8cb8cd779/files/4ac64a2eb61b6d5d5f5a6b822ac6d0723e85754d115a3368059f4ecd0a49948d 200
-[debug] [2026-01-26T04:10:26.466Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/netsystemsdc-1d977/versions/b077f6a8cb8cd779/files/4ac64a2eb61b6d5d5f5a6b822ac6d0723e85754d115a3368059f4ecd0a49948d [stream]
-[debug] [2026-01-26T04:10:26.466Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/netsystemsdc-1d977/versions/b077f6a8cb8cd779/files/5cc36987b98480f1f509fc646ab77454821bb80800755da47b379486683a33bd 200
-[debug] [2026-01-26T04:10:26.466Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/netsystemsdc-1d977/versions/b077f6a8cb8cd779/files/5cc36987b98480f1f509fc646ab77454821bb80800755da47b379486683a33bd [stream]
-[debug] [2026-01-26T04:10:26.467Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/netsystemsdc-1d977/versions/b077f6a8cb8cd779/files/e4deea50964e0f2cd682c07a4cc7b581eebea46b92674076e3c9053fd2cfda48 200
-[debug] [2026-01-26T04:10:26.467Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/netsystemsdc-1d977/versions/b077f6a8cb8cd779/files/e4deea50964e0f2cd682c07a4cc7b581eebea46b92674076e3c9053fd2cfda48 [stream]
-[debug] [2026-01-26T04:10:26.467Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/netsystemsdc-1d977/versions/b077f6a8cb8cd779/files/89df296ce5117b61351394e1359018b742e0429058f038f5ea71f20d4c0fde5c 200
-[debug] [2026-01-26T04:10:26.467Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/netsystemsdc-1d977/versions/b077f6a8cb8cd779/files/89df296ce5117b61351394e1359018b742e0429058f038f5ea71f20d4c0fde5c [stream]
-[debug] [2026-01-26T04:10:26.467Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/netsystemsdc-1d977/versions/b077f6a8cb8cd779/files/6d9ccb669e34e22c3e2e1f346f53b7f7e81d941c59e19aff9f059386e2794445 200
-[debug] [2026-01-26T04:10:26.467Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/netsystemsdc-1d977/versions/b077f6a8cb8cd779/files/6d9ccb669e34e22c3e2e1f346f53b7f7e81d941c59e19aff9f059386e2794445 [stream]
-[debug] [2026-01-26T04:10:26.467Z] [hosting][upload queue][FINAL] {"max":1207,"min":1127,"avg":1182.3636363636363,"active":0,"complete":11,"success":11,"errored":0,"retried":0,"total":11,"elapsed":1208}
-[info] +  hosting[netsystemsdc-1d977]: file upload complete 
-[debug] [2026-01-26T04:10:26.468Z] [hosting] deploy completed after 2065ms
-[info] i  functions: updating Node.js 20 (2nd Gen) function firebase-frameworks-netsystemsdc-1d977:ssrnetsystemsdc1d977(us-central1)... 
-[debug] [2026-01-26T04:10:26.473Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:10:26.473Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:10:26.473Z] >>> [apiv2][query] PATCH https://cloudfunctions.googleapis.com/v2/projects/netsystemsdc-1d977/locations/us-central1/functions/ssrnetsystemsdc1d977 updateMask=name%2CbuildConfig.runtime%2CbuildConfig.entryPoint%2CbuildConfig.source.storageSource.bucket%2CbuildConfig.source.storageSource.object%2CbuildConfig.environmentVariables%2CbuildConfig.sourceToken%2CserviceConfig.environmentVariables%2CserviceConfig.ingressSettings%2CserviceConfig.timeoutSeconds%2CserviceConfig.serviceAccountEmail%2CserviceConfig.availableMemory%2CserviceConfig.minInstanceCount%2CserviceConfig.maxInstanceCount%2CserviceConfig.maxInstanceRequestConcurrency%2CserviceConfig.availableCpu%2CserviceConfig.vpcConnector%2CserviceConfig.vpcConnectorEgressSettings%2Clabels
-[debug] [2026-01-26T04:10:26.473Z] >>> [apiv2][body] PATCH https://cloudfunctions.googleapis.com/v2/projects/netsystemsdc-1d977/locations/us-central1/functions/ssrnetsystemsdc1d977 {"name":"projects/netsystemsdc-1d977/locations/us-central1/functions/ssrnetsystemsdc1d977","buildConfig":{"runtime":"nodejs20","entryPoint":"ssrnetsystemsdc1d977","source":{"storageSource":{"bucket":"gcf-v2-uploads-133124262183.us-central1.cloudfunctions.appspot.com","object":"52a0d56a-db8a-4f4d-b66b-58c9993cb317.zip"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""}},"serviceConfig":{"environmentVariables":{"VERCEL_URL":"netsystemsdc-1d977.web.app","__FIREBASE_FRAMEWORKS_ENTRY__":"next.js","__FIREBASE_DEFAULTS__":"{\"config\":{\"projectId\":\"netsystemsdc-1d977\",\"appId\":\"1:133124262183:web:d62f68c133da37cc61c102\",\"storageBucket\":\"netsystemsdc-1d977.firebasestorage.app\",\"apiKey\":\"AIzaSyC4fvEv8goovWIDcM_OHGFVcFQSjz69VT8\",\"authDomain\":\"netsystemsdc-1d977.firebaseapp.com\",\"messagingSenderId\":\"133124262183\",\"measurementId\":\"G-K43S0Z2P9E\",\"projectNumber\":\"133124262183\",\"version\":\"2\"},\"_authTokenSyncURL\":\"/__session\"}","FIREBASE_CONFIG":"{\"projectId\":\"netsystemsdc-1d977\",\"storageBucket\":\"netsystemsdc-1d977.firebasestorage.app\"}","GCLOUD_PROJECT":"netsystemsdc-1d977","EVENTARC_CLOUD_EVENT_SOURCE":"projects/netsystemsdc-1d977/locations/us-central1/services/ssrnetsystemsdc1d977","FUNCTION_TARGET":"ssrnetsystemsdc1d977","LOG_EXECUTION_ID":"true"},"ingressSettings":null,"timeoutSeconds":null,"serviceAccountEmail":null,"availableMemory":"256Mi","minInstanceCount":null,"maxInstanceCount":null,"maxInstanceRequestConcurrency":80,"availableCpu":"1","vpcConnector":null,"vpcConnectorEgressSettings":null},"labels":{"deployment-tool":"cli-firebase","firebase-functions-codebase":"firebase-frameworks-netsystemsdc-1d977","firebase-functions-hash":"ffe8c840cb449c85b6f194c70f44bd6221ccc214"}}
-[debug] [2026-01-26T04:10:27.923Z] <<< [apiv2][status] PATCH https://cloudfunctions.googleapis.com/v2/projects/netsystemsdc-1d977/locations/us-central1/functions/ssrnetsystemsdc1d977 200
-[debug] [2026-01-26T04:10:27.923Z] <<< [apiv2][body] PATCH https://cloudfunctions.googleapis.com/v2/projects/netsystemsdc-1d977/locations/us-central1/functions/ssrnetsystemsdc1d977 {"name":"projects/netsystemsdc-1d977/locations/us-central1/operations/operation-1769400626215-64942afca797d-736babe7-fb4b5228","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2026-01-26T04:10:27.204544731Z","target":"projects/netsystemsdc-1d977/locations/us-central1/functions/ssrnetsystemsdc1d977","verb":"update","cancelRequested":false,"apiVersion":"v2"},"done":false}
-[debug] [2026-01-26T04:10:27.923Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:10:27.923Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:10:27.923Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/netsystemsdc-1d977/locations/us-central1/operations/operation-1769400626215-64942afca797d-736babe7-fb4b5228 [none]
-[debug] [2026-01-26T04:10:28.271Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/netsystemsdc-1d977/locations/us-central1/operations/operation-1769400626215-64942afca797d-736babe7-fb4b5228 200
-[debug] [2026-01-26T04:10:28.271Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/netsystemsdc-1d977/locations/us-central1/operations/operation-1769400626215-64942afca797d-736babe7-fb4b5228 {"name":"projects/netsystemsdc-1d977/locations/us-central1/operations/operation-1769400626215-64942afca797d-736babe7-fb4b5228","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2026-01-26T04:10:27.204544731Z","target":"projects/netsystemsdc-1d977/locations/us-central1/functions/ssrnetsystemsdc1d977","verb":"update","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/netsystemsdc-1d977/locations/us-central1/functions/ssrnetsystemsdc1d977","buildConfig":{"runtime":"nodejs20","entryPoint":"ssrnetsystemsdc1d977","source":{"storageSource":{"bucket":"gcf-v2-sources-133124262183-us-central1","object":"ssrnetsystemsdc1d977/function-source.zip","generation":"1769400627111877"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRepository":"projects/netsystemsdc-1d977/locations/us-central1/repositories/gcf-artifacts","sourceProvenance":{"resolvedStorageSource":{"bucket":"gcf-v2-sources-133124262183-us-central1","object":"ssrnetsystemsdc1d977/function-source.zip","generation":"1769048353812849"}},"dockerRegistry":"ARTIFACT_REGISTRY","serviceAccount":"projects/netsystemsdc-1d977/serviceAccounts/133124262183-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/netsystemsdc-1d977/locations/us-central1/services/ssrnetsystemsdc1d977","timeoutSeconds":60,"environmentVariables":{"VERCEL_URL":"netsystemsdc-1d977.web.app","__FIREBASE_FRAMEWORKS_ENTRY__":"next.js","__FIREBASE_DEFAULTS__":"{\"config\":{\"projectId\":\"netsystemsdc-1d977\",\"appId\":\"1:133124262183:web:d62f68c133da37cc61c102\",\"storageBucket\":\"netsystemsdc-1d977.firebasestorage.app\",\"apiKey\":\"AIzaSyC4fvEv8goovWIDcM_OHGFVcFQSjz69VT8\",\"authDomain\":\"netsystemsdc-1d977.firebaseapp.com\",\"messagingSenderId\":\"133124262183\",\"measurementId\":\"G-K43S0Z2P9E\",\"projectNumber\":\"133124262183\",\"version\":\"2\"},\"_authTokenSyncURL\":\"/__session\"}","FIREBASE_CONFIG":"{\"projectId\":\"netsystemsdc-1d977\",\"storageBucket\":\"netsystemsdc-1d977.firebasestorage.app\"}","GCLOUD_PROJECT":"netsystemsdc-1d977","EVENTARC_CLOUD_EVENT_SOURCE":"projects/netsystemsdc-1d977/locations/us-central1/services/ssrnetsystemsdc1d977","FUNCTION_TARGET":"ssrnetsystemsdc1d977","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","serviceAccountEmail":"133124262183-compute@developer.gserviceaccount.com","availableMemory":"256Mi","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"state":"UNKNOWN","labels":{"firebase-functions-codebase":"firebase-frameworks-netsystemsdc-1d977","firebase-functions-hash":"ffe8c840cb449c85b6f194c70f44bd6221ccc214"},"stateMessages":[{"severity":"ERROR","type":"CloudRunServiceNotFound","message":"Cloud Run service projects/netsystemsdc-1d977/locations/us-central1/services/ssrnetsystemsdc1d977 for the function was not found. The function will not work correctly. Please redeploy."}],"environment":"GEN_2","url":"https://us-central1-netsystemsdc-1d977.cloudfunctions.net/ssrnetsystemsdc1d977","satisfiesPzi":true},"stages":[{"name":"BUILD","state":"NOT_STARTED"},{"name":"SERVICE","state":"NOT_STARTED"}],"operationType":"UPDATE_FUNCTION"},"done":false}
-[debug] [2026-01-26T04:10:28.784Z] [update-firebase-frameworks-netsystemsdc-1d977-us-central1-ssrnetsystemsdc1d977] Retrying task index 0
-[debug] [2026-01-26T04:10:28.784Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:10:28.784Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:10:28.784Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/netsystemsdc-1d977/locations/us-central1/operations/operation-1769400626215-64942afca797d-736babe7-fb4b5228 [none]
-[debug] [2026-01-26T04:10:29.104Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/netsystemsdc-1d977/locations/us-central1/operations/operation-1769400626215-64942afca797d-736babe7-fb4b5228 200
-[debug] [2026-01-26T04:10:29.105Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/netsystemsdc-1d977/locations/us-central1/operations/operation-1769400626215-64942afca797d-736babe7-fb4b5228 {"name":"projects/netsystemsdc-1d977/locations/us-central1/operations/operation-1769400626215-64942afca797d-736babe7-fb4b5228","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2026-01-26T04:10:27.204544731Z","target":"projects/netsystemsdc-1d977/locations/us-central1/functions/ssrnetsystemsdc1d977","verb":"update","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/netsystemsdc-1d977/locations/us-central1/functions/ssrnetsystemsdc1d977","buildConfig":{"runtime":"nodejs20","entryPoint":"ssrnetsystemsdc1d977","source":{"storageSource":{"bucket":"gcf-v2-sources-133124262183-us-central1","object":"ssrnetsystemsdc1d977/function-source.zip","generation":"1769400627111877"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRepository":"projects/netsystemsdc-1d977/locations/us-central1/repositories/gcf-artifacts","sourceProvenance":{"resolvedStorageSource":{"bucket":"gcf-v2-sources-133124262183-us-central1","object":"ssrnetsystemsdc1d977/function-source.zip","generation":"1769048353812849"}},"dockerRegistry":"ARTIFACT_REGISTRY","serviceAccount":"projects/netsystemsdc-1d977/serviceAccounts/133124262183-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/netsystemsdc-1d977/locations/us-central1/services/ssrnetsystemsdc1d977","timeoutSeconds":60,"environmentVariables":{"VERCEL_URL":"netsystemsdc-1d977.web.app","__FIREBASE_FRAMEWORKS_ENTRY__":"next.js","__FIREBASE_DEFAULTS__":"{\"config\":{\"projectId\":\"netsystemsdc-1d977\",\"appId\":\"1:133124262183:web:d62f68c133da37cc61c102\",\"storageBucket\":\"netsystemsdc-1d977.firebasestorage.app\",\"apiKey\":\"AIzaSyC4fvEv8goovWIDcM_OHGFVcFQSjz69VT8\",\"authDomain\":\"netsystemsdc-1d977.firebaseapp.com\",\"messagingSenderId\":\"133124262183\",\"measurementId\":\"G-K43S0Z2P9E\",\"projectNumber\":\"133124262183\",\"version\":\"2\"},\"_authTokenSyncURL\":\"/__session\"}","FIREBASE_CONFIG":"{\"projectId\":\"netsystemsdc-1d977\",\"storageBucket\":\"netsystemsdc-1d977.firebasestorage.app\"}","GCLOUD_PROJECT":"netsystemsdc-1d977","EVENTARC_CLOUD_EVENT_SOURCE":"projects/netsystemsdc-1d977/locations/us-central1/services/ssrnetsystemsdc1d977","FUNCTION_TARGET":"ssrnetsystemsdc1d977","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","serviceAccountEmail":"133124262183-compute@developer.gserviceaccount.com","availableMemory":"256Mi","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"state":"UNKNOWN","labels":{"firebase-functions-codebase":"firebase-frameworks-netsystemsdc-1d977","firebase-functions-hash":"ffe8c840cb449c85b6f194c70f44bd6221ccc214"},"stateMessages":[{"severity":"ERROR","type":"CloudRunServiceNotFound","message":"Cloud Run service projects/netsystemsdc-1d977/locations/us-central1/services/ssrnetsystemsdc1d977 for the function was not found. The function will not work correctly. Please redeploy."}],"environment":"GEN_2","url":"https://us-central1-netsystemsdc-1d977.cloudfunctions.net/ssrnetsystemsdc1d977","satisfiesPzi":true},"stages":[{"name":"BUILD","message":"Build in progress","state":"IN_PROGRESS","resource":"projects/133124262183/locations/us-central1/builds/25057f13-0e77-4079-9e74-ec6db3e0cd00","resourceUri":"https://console.cloud.google.com/cloud-build/builds;region=us-central1/25057f13-0e77-4079-9e74-ec6db3e0cd00?project=133124262183"},{"name":"SERVICE","state":"NOT_STARTED"}],"operationType":"UPDATE_FUNCTION","buildName":"projects/133124262183/locations/us-central1/builds/25057f13-0e77-4079-9e74-ec6db3e0cd00"},"done":false}
-[debug] [2026-01-26T04:10:30.108Z] [update-firebase-frameworks-netsystemsdc-1d977-us-central1-ssrnetsystemsdc1d977] Retrying task index 0
-[debug] [2026-01-26T04:10:30.108Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:10:30.108Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:10:30.108Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/netsystemsdc-1d977/locations/us-central1/operations/operation-1769400626215-64942afca797d-736babe7-fb4b5228 [none]
-[debug] [2026-01-26T04:10:30.408Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/netsystemsdc-1d977/locations/us-central1/operations/operation-1769400626215-64942afca797d-736babe7-fb4b5228 200
-[debug] [2026-01-26T04:10:30.408Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/netsystemsdc-1d977/locations/us-central1/operations/operation-1769400626215-64942afca797d-736babe7-fb4b5228 {"name":"projects/netsystemsdc-1d977/locations/us-central1/operations/operation-1769400626215-64942afca797d-736babe7-fb4b5228","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2026-01-26T04:10:27.204544731Z","target":"projects/netsystemsdc-1d977/locations/us-central1/functions/ssrnetsystemsdc1d977","verb":"update","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/netsystemsdc-1d977/locations/us-central1/functions/ssrnetsystemsdc1d977","buildConfig":{"runtime":"nodejs20","entryPoint":"ssrnetsystemsdc1d977","source":{"storageSource":{"bucket":"gcf-v2-sources-133124262183-us-central1","object":"ssrnetsystemsdc1d977/function-source.zip","generation":"1769400627111877"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRepository":"projects/netsystemsdc-1d977/locations/us-central1/repositories/gcf-artifacts","sourceProvenance":{"resolvedStorageSource":{"bucket":"gcf-v2-sources-133124262183-us-central1","object":"ssrnetsystemsdc1d977/function-source.zip","generation":"1769048353812849"}},"dockerRegistry":"ARTIFACT_REGISTRY","serviceAccount":"projects/netsystemsdc-1d977/serviceAccounts/133124262183-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/netsystemsdc-1d977/locations/us-central1/services/ssrnetsystemsdc1d977","timeoutSeconds":60,"environmentVariables":{"VERCEL_URL":"netsystemsdc-1d977.web.app","__FIREBASE_FRAMEWORKS_ENTRY__":"next.js","__FIREBASE_DEFAULTS__":"{\"config\":{\"projectId\":\"netsystemsdc-1d977\",\"appId\":\"1:133124262183:web:d62f68c133da37cc61c102\",\"storageBucket\":\"netsystemsdc-1d977.firebasestorage.app\",\"apiKey\":\"AIzaSyC4fvEv8goovWIDcM_OHGFVcFQSjz69VT8\",\"authDomain\":\"netsystemsdc-1d977.firebaseapp.com\",\"messagingSenderId\":\"133124262183\",\"measurementId\":\"G-K43S0Z2P9E\",\"projectNumber\":\"133124262183\",\"version\":\"2\"},\"_authTokenSyncURL\":\"/__session\"}","FIREBASE_CONFIG":"{\"projectId\":\"netsystemsdc-1d977\",\"storageBucket\":\"netsystemsdc-1d977.firebasestorage.app\"}","GCLOUD_PROJECT":"netsystemsdc-1d977","EVENTARC_CLOUD_EVENT_SOURCE":"projects/netsystemsdc-1d977/locations/us-central1/services/ssrnetsystemsdc1d977","FUNCTION_TARGET":"ssrnetsystemsdc1d977","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","serviceAccountEmail":"133124262183-compute@developer.gserviceaccount.com","availableMemory":"256Mi","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"state":"UNKNOWN","labels":{"firebase-functions-codebase":"firebase-frameworks-netsystemsdc-1d977","firebase-functions-hash":"ffe8c840cb449c85b6f194c70f44bd6221ccc214"},"stateMessages":[{"severity":"ERROR","type":"CloudRunServiceNotFound","message":"Cloud Run service projects/netsystemsdc-1d977/locations/us-central1/services/ssrnetsystemsdc1d977 for the function was not found. The function will not work correctly. Please redeploy."}],"environment":"GEN_2","url":"https://us-central1-netsystemsdc-1d977.cloudfunctions.net/ssrnetsystemsdc1d977","satisfiesPzi":true},"stages":[{"name":"BUILD","message":"Build in progress","state":"IN_PROGRESS","resource":"projects/133124262183/locations/us-central1/builds/25057f13-0e77-4079-9e74-ec6db3e0cd00","resourceUri":"https://console.cloud.google.com/cloud-build/builds;region=us-central1/25057f13-0e77-4079-9e74-ec6db3e0cd00?project=133124262183"},{"name":"SERVICE","state":"NOT_STARTED"}],"operationType":"UPDATE_FUNCTION","buildName":"projects/133124262183/locations/us-central1/builds/25057f13-0e77-4079-9e74-ec6db3e0cd00"},"done":false}
-[debug] [2026-01-26T04:10:32.419Z] [update-firebase-frameworks-netsystemsdc-1d977-us-central1-ssrnetsystemsdc1d977] Retrying task index 0
-[debug] [2026-01-26T04:10:32.419Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:10:32.419Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:10:32.419Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/netsystemsdc-1d977/locations/us-central1/operations/operation-1769400626215-64942afca797d-736babe7-fb4b5228 [none]
-[debug] [2026-01-26T04:10:32.757Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/netsystemsdc-1d977/locations/us-central1/operations/operation-1769400626215-64942afca797d-736babe7-fb4b5228 200
-[debug] [2026-01-26T04:10:32.758Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/netsystemsdc-1d977/locations/us-central1/operations/operation-1769400626215-64942afca797d-736babe7-fb4b5228 {"name":"projects/netsystemsdc-1d977/locations/us-central1/operations/operation-1769400626215-64942afca797d-736babe7-fb4b5228","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2026-01-26T04:10:27.204544731Z","target":"projects/netsystemsdc-1d977/locations/us-central1/functions/ssrnetsystemsdc1d977","verb":"update","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/netsystemsdc-1d977/locations/us-central1/functions/ssrnetsystemsdc1d977","buildConfig":{"runtime":"nodejs20","entryPoint":"ssrnetsystemsdc1d977","source":{"storageSource":{"bucket":"gcf-v2-sources-133124262183-us-central1","object":"ssrnetsystemsdc1d977/function-source.zip","generation":"1769400627111877"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRepository":"projects/netsystemsdc-1d977/locations/us-central1/repositories/gcf-artifacts","sourceProvenance":{"resolvedStorageSource":{"bucket":"gcf-v2-sources-133124262183-us-central1","object":"ssrnetsystemsdc1d977/function-source.zip","generation":"1769048353812849"}},"dockerRegistry":"ARTIFACT_REGISTRY","serviceAccount":"projects/netsystemsdc-1d977/serviceAccounts/133124262183-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/netsystemsdc-1d977/locations/us-central1/services/ssrnetsystemsdc1d977","timeoutSeconds":60,"environmentVariables":{"VERCEL_URL":"netsystemsdc-1d977.web.app","__FIREBASE_FRAMEWORKS_ENTRY__":"next.js","__FIREBASE_DEFAULTS__":"{\"config\":{\"projectId\":\"netsystemsdc-1d977\",\"appId\":\"1:133124262183:web:d62f68c133da37cc61c102\",\"storageBucket\":\"netsystemsdc-1d977.firebasestorage.app\",\"apiKey\":\"AIzaSyC4fvEv8goovWIDcM_OHGFVcFQSjz69VT8\",\"authDomain\":\"netsystemsdc-1d977.firebaseapp.com\",\"messagingSenderId\":\"133124262183\",\"measurementId\":\"G-K43S0Z2P9E\",\"projectNumber\":\"133124262183\",\"version\":\"2\"},\"_authTokenSyncURL\":\"/__session\"}","FIREBASE_CONFIG":"{\"projectId\":\"netsystemsdc-1d977\",\"storageBucket\":\"netsystemsdc-1d977.firebasestorage.app\"}","GCLOUD_PROJECT":"netsystemsdc-1d977","EVENTARC_CLOUD_EVENT_SOURCE":"projects/netsystemsdc-1d977/locations/us-central1/services/ssrnetsystemsdc1d977","FUNCTION_TARGET":"ssrnetsystemsdc1d977","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","serviceAccountEmail":"133124262183-compute@developer.gserviceaccount.com","availableMemory":"256Mi","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"state":"UNKNOWN","labels":{"firebase-functions-codebase":"firebase-frameworks-netsystemsdc-1d977","firebase-functions-hash":"ffe8c840cb449c85b6f194c70f44bd6221ccc214"},"stateMessages":[{"severity":"ERROR","type":"CloudRunServiceNotFound","message":"Cloud Run service projects/netsystemsdc-1d977/locations/us-central1/services/ssrnetsystemsdc1d977 for the function was not found. The function will not work correctly. Please redeploy."}],"environment":"GEN_2","url":"https://us-central1-netsystemsdc-1d977.cloudfunctions.net/ssrnetsystemsdc1d977","satisfiesPzi":true},"stages":[{"name":"BUILD","message":"Build in progress","state":"IN_PROGRESS","resource":"projects/133124262183/locations/us-central1/builds/25057f13-0e77-4079-9e74-ec6db3e0cd00","resourceUri":"https://console.cloud.google.com/cloud-build/builds;region=us-central1/25057f13-0e77-4079-9e74-ec6db3e0cd00?project=133124262183"},{"name":"SERVICE","state":"NOT_STARTED"}],"operationType":"UPDATE_FUNCTION","buildName":"projects/133124262183/locations/us-central1/builds/25057f13-0e77-4079-9e74-ec6db3e0cd00"},"done":false}
-[debug] [2026-01-26T04:10:36.771Z] [update-firebase-frameworks-netsystemsdc-1d977-us-central1-ssrnetsystemsdc1d977] Retrying task index 0
-[debug] [2026-01-26T04:10:36.772Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:10:36.772Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:10:36.772Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/netsystemsdc-1d977/locations/us-central1/operations/operation-1769400626215-64942afca797d-736babe7-fb4b5228 [none]
-[debug] [2026-01-26T04:10:37.074Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/netsystemsdc-1d977/locations/us-central1/operations/operation-1769400626215-64942afca797d-736babe7-fb4b5228 200
-[debug] [2026-01-26T04:10:37.075Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/netsystemsdc-1d977/locations/us-central1/operations/operation-1769400626215-64942afca797d-736babe7-fb4b5228 {"name":"projects/netsystemsdc-1d977/locations/us-central1/operations/operation-1769400626215-64942afca797d-736babe7-fb4b5228","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2026-01-26T04:10:27.204544731Z","target":"projects/netsystemsdc-1d977/locations/us-central1/functions/ssrnetsystemsdc1d977","verb":"update","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/netsystemsdc-1d977/locations/us-central1/functions/ssrnetsystemsdc1d977","buildConfig":{"runtime":"nodejs20","entryPoint":"ssrnetsystemsdc1d977","source":{"storageSource":{"bucket":"gcf-v2-sources-133124262183-us-central1","object":"ssrnetsystemsdc1d977/function-source.zip","generation":"1769400627111877"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRepository":"projects/netsystemsdc-1d977/locations/us-central1/repositories/gcf-artifacts","sourceProvenance":{"resolvedStorageSource":{"bucket":"gcf-v2-sources-133124262183-us-central1","object":"ssrnetsystemsdc1d977/function-source.zip","generation":"1769048353812849"}},"dockerRegistry":"ARTIFACT_REGISTRY","serviceAccount":"projects/netsystemsdc-1d977/serviceAccounts/133124262183-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/netsystemsdc-1d977/locations/us-central1/services/ssrnetsystemsdc1d977","timeoutSeconds":60,"environmentVariables":{"VERCEL_URL":"netsystemsdc-1d977.web.app","__FIREBASE_FRAMEWORKS_ENTRY__":"next.js","__FIREBASE_DEFAULTS__":"{\"config\":{\"projectId\":\"netsystemsdc-1d977\",\"appId\":\"1:133124262183:web:d62f68c133da37cc61c102\",\"storageBucket\":\"netsystemsdc-1d977.firebasestorage.app\",\"apiKey\":\"AIzaSyC4fvEv8goovWIDcM_OHGFVcFQSjz69VT8\",\"authDomain\":\"netsystemsdc-1d977.firebaseapp.com\",\"messagingSenderId\":\"133124262183\",\"measurementId\":\"G-K43S0Z2P9E\",\"projectNumber\":\"133124262183\",\"version\":\"2\"},\"_authTokenSyncURL\":\"/__session\"}","FIREBASE_CONFIG":"{\"projectId\":\"netsystemsdc-1d977\",\"storageBucket\":\"netsystemsdc-1d977.firebasestorage.app\"}","GCLOUD_PROJECT":"netsystemsdc-1d977","EVENTARC_CLOUD_EVENT_SOURCE":"projects/netsystemsdc-1d977/locations/us-central1/services/ssrnetsystemsdc1d977","FUNCTION_TARGET":"ssrnetsystemsdc1d977","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","serviceAccountEmail":"133124262183-compute@developer.gserviceaccount.com","availableMemory":"256Mi","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"state":"UNKNOWN","labels":{"firebase-functions-codebase":"firebase-frameworks-netsystemsdc-1d977","firebase-functions-hash":"ffe8c840cb449c85b6f194c70f44bd6221ccc214"},"stateMessages":[{"severity":"ERROR","type":"CloudRunServiceNotFound","message":"Cloud Run service projects/netsystemsdc-1d977/locations/us-central1/services/ssrnetsystemsdc1d977 for the function was not found. The function will not work correctly. Please redeploy."}],"environment":"GEN_2","url":"https://us-central1-netsystemsdc-1d977.cloudfunctions.net/ssrnetsystemsdc1d977","satisfiesPzi":true},"stages":[{"name":"BUILD","message":"Build in progress","state":"IN_PROGRESS","resource":"projects/133124262183/locations/us-central1/builds/25057f13-0e77-4079-9e74-ec6db3e0cd00","resourceUri":"https://console.cloud.google.com/cloud-build/builds;region=us-central1/25057f13-0e77-4079-9e74-ec6db3e0cd00?project=133124262183"},{"name":"SERVICE","state":"NOT_STARTED"}],"operationType":"UPDATE_FUNCTION","buildName":"projects/133124262183/locations/us-central1/builds/25057f13-0e77-4079-9e74-ec6db3e0cd00"},"done":false}
-[debug] [2026-01-26T04:10:45.083Z] [update-firebase-frameworks-netsystemsdc-1d977-us-central1-ssrnetsystemsdc1d977] Retrying task index 0
-[debug] [2026-01-26T04:10:45.083Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:10:45.083Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:10:45.083Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/netsystemsdc-1d977/locations/us-central1/operations/operation-1769400626215-64942afca797d-736babe7-fb4b5228 [none]
-[debug] [2026-01-26T04:10:45.402Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/netsystemsdc-1d977/locations/us-central1/operations/operation-1769400626215-64942afca797d-736babe7-fb4b5228 200
-[debug] [2026-01-26T04:10:45.402Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/netsystemsdc-1d977/locations/us-central1/operations/operation-1769400626215-64942afca797d-736babe7-fb4b5228 {"name":"projects/netsystemsdc-1d977/locations/us-central1/operations/operation-1769400626215-64942afca797d-736babe7-fb4b5228","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2026-01-26T04:10:27.204544731Z","target":"projects/netsystemsdc-1d977/locations/us-central1/functions/ssrnetsystemsdc1d977","verb":"update","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/netsystemsdc-1d977/locations/us-central1/functions/ssrnetsystemsdc1d977","buildConfig":{"runtime":"nodejs20","entryPoint":"ssrnetsystemsdc1d977","source":{"storageSource":{"bucket":"gcf-v2-sources-133124262183-us-central1","object":"ssrnetsystemsdc1d977/function-source.zip","generation":"1769400627111877"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRepository":"projects/netsystemsdc-1d977/locations/us-central1/repositories/gcf-artifacts","sourceProvenance":{"resolvedStorageSource":{"bucket":"gcf-v2-sources-133124262183-us-central1","object":"ssrnetsystemsdc1d977/function-source.zip","generation":"1769048353812849"}},"dockerRegistry":"ARTIFACT_REGISTRY","serviceAccount":"projects/netsystemsdc-1d977/serviceAccounts/133124262183-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/netsystemsdc-1d977/locations/us-central1/services/ssrnetsystemsdc1d977","timeoutSeconds":60,"environmentVariables":{"VERCEL_URL":"netsystemsdc-1d977.web.app","__FIREBASE_FRAMEWORKS_ENTRY__":"next.js","__FIREBASE_DEFAULTS__":"{\"config\":{\"projectId\":\"netsystemsdc-1d977\",\"appId\":\"1:133124262183:web:d62f68c133da37cc61c102\",\"storageBucket\":\"netsystemsdc-1d977.firebasestorage.app\",\"apiKey\":\"AIzaSyC4fvEv8goovWIDcM_OHGFVcFQSjz69VT8\",\"authDomain\":\"netsystemsdc-1d977.firebaseapp.com\",\"messagingSenderId\":\"133124262183\",\"measurementId\":\"G-K43S0Z2P9E\",\"projectNumber\":\"133124262183\",\"version\":\"2\"},\"_authTokenSyncURL\":\"/__session\"}","FIREBASE_CONFIG":"{\"projectId\":\"netsystemsdc-1d977\",\"storageBucket\":\"netsystemsdc-1d977.firebasestorage.app\"}","GCLOUD_PROJECT":"netsystemsdc-1d977","EVENTARC_CLOUD_EVENT_SOURCE":"projects/netsystemsdc-1d977/locations/us-central1/services/ssrnetsystemsdc1d977","FUNCTION_TARGET":"ssrnetsystemsdc1d977","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","serviceAccountEmail":"133124262183-compute@developer.gserviceaccount.com","availableMemory":"256Mi","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"state":"UNKNOWN","labels":{"firebase-functions-codebase":"firebase-frameworks-netsystemsdc-1d977","firebase-functions-hash":"ffe8c840cb449c85b6f194c70f44bd6221ccc214"},"stateMessages":[{"severity":"ERROR","type":"CloudRunServiceNotFound","message":"Cloud Run service projects/netsystemsdc-1d977/locations/us-central1/services/ssrnetsystemsdc1d977 for the function was not found. The function will not work correctly. Please redeploy."}],"environment":"GEN_2","url":"https://us-central1-netsystemsdc-1d977.cloudfunctions.net/ssrnetsystemsdc1d977","satisfiesPzi":true},"stages":[{"name":"BUILD","message":"Build in progress","state":"IN_PROGRESS","resource":"projects/133124262183/locations/us-central1/builds/25057f13-0e77-4079-9e74-ec6db3e0cd00","resourceUri":"https://console.cloud.google.com/cloud-build/builds;region=us-central1/25057f13-0e77-4079-9e74-ec6db3e0cd00?project=133124262183"},{"name":"SERVICE","state":"NOT_STARTED"}],"operationType":"UPDATE_FUNCTION","buildName":"projects/133124262183/locations/us-central1/builds/25057f13-0e77-4079-9e74-ec6db3e0cd00"},"done":false}
-[debug] [2026-01-26T04:10:55.415Z] [update-firebase-frameworks-netsystemsdc-1d977-us-central1-ssrnetsystemsdc1d977] Retrying task index 0
-[debug] [2026-01-26T04:10:55.415Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:10:55.415Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:10:55.415Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/netsystemsdc-1d977/locations/us-central1/operations/operation-1769400626215-64942afca797d-736babe7-fb4b5228 [none]
-[debug] [2026-01-26T04:10:55.682Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/netsystemsdc-1d977/locations/us-central1/operations/operation-1769400626215-64942afca797d-736babe7-fb4b5228 200
-[debug] [2026-01-26T04:10:55.682Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/netsystemsdc-1d977/locations/us-central1/operations/operation-1769400626215-64942afca797d-736babe7-fb4b5228 {"name":"projects/netsystemsdc-1d977/locations/us-central1/operations/operation-1769400626215-64942afca797d-736babe7-fb4b5228","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2026-01-26T04:10:27.204544731Z","target":"projects/netsystemsdc-1d977/locations/us-central1/functions/ssrnetsystemsdc1d977","verb":"update","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/netsystemsdc-1d977/locations/us-central1/functions/ssrnetsystemsdc1d977","buildConfig":{"runtime":"nodejs20","entryPoint":"ssrnetsystemsdc1d977","source":{"storageSource":{"bucket":"gcf-v2-sources-133124262183-us-central1","object":"ssrnetsystemsdc1d977/function-source.zip","generation":"1769400627111877"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRepository":"projects/netsystemsdc-1d977/locations/us-central1/repositories/gcf-artifacts","sourceProvenance":{"resolvedStorageSource":{"bucket":"gcf-v2-sources-133124262183-us-central1","object":"ssrnetsystemsdc1d977/function-source.zip","generation":"1769048353812849"}},"dockerRegistry":"ARTIFACT_REGISTRY","serviceAccount":"projects/netsystemsdc-1d977/serviceAccounts/133124262183-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/netsystemsdc-1d977/locations/us-central1/services/ssrnetsystemsdc1d977","timeoutSeconds":60,"environmentVariables":{"VERCEL_URL":"netsystemsdc-1d977.web.app","__FIREBASE_FRAMEWORKS_ENTRY__":"next.js","__FIREBASE_DEFAULTS__":"{\"config\":{\"projectId\":\"netsystemsdc-1d977\",\"appId\":\"1:133124262183:web:d62f68c133da37cc61c102\",\"storageBucket\":\"netsystemsdc-1d977.firebasestorage.app\",\"apiKey\":\"AIzaSyC4fvEv8goovWIDcM_OHGFVcFQSjz69VT8\",\"authDomain\":\"netsystemsdc-1d977.firebaseapp.com\",\"messagingSenderId\":\"133124262183\",\"measurementId\":\"G-K43S0Z2P9E\",\"projectNumber\":\"133124262183\",\"version\":\"2\"},\"_authTokenSyncURL\":\"/__session\"}","FIREBASE_CONFIG":"{\"projectId\":\"netsystemsdc-1d977\",\"storageBucket\":\"netsystemsdc-1d977.firebasestorage.app\"}","GCLOUD_PROJECT":"netsystemsdc-1d977","EVENTARC_CLOUD_EVENT_SOURCE":"projects/netsystemsdc-1d977/locations/us-central1/services/ssrnetsystemsdc1d977","FUNCTION_TARGET":"ssrnetsystemsdc1d977","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","serviceAccountEmail":"133124262183-compute@developer.gserviceaccount.com","availableMemory":"256Mi","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"state":"UNKNOWN","labels":{"firebase-functions-codebase":"firebase-frameworks-netsystemsdc-1d977","firebase-functions-hash":"ffe8c840cb449c85b6f194c70f44bd6221ccc214"},"stateMessages":[{"severity":"ERROR","type":"CloudRunServiceNotFound","message":"Cloud Run service projects/netsystemsdc-1d977/locations/us-central1/services/ssrnetsystemsdc1d977 for the function was not found. The function will not work correctly. Please redeploy."}],"environment":"GEN_2","url":"https://us-central1-netsystemsdc-1d977.cloudfunctions.net/ssrnetsystemsdc1d977","satisfiesPzi":true},"stages":[{"name":"BUILD","message":"Build in progress","state":"IN_PROGRESS","resource":"projects/133124262183/locations/us-central1/builds/25057f13-0e77-4079-9e74-ec6db3e0cd00","resourceUri":"https://console.cloud.google.com/cloud-build/builds;region=us-central1/25057f13-0e77-4079-9e74-ec6db3e0cd00?project=133124262183"},{"name":"SERVICE","state":"NOT_STARTED"}],"operationType":"UPDATE_FUNCTION","buildName":"projects/133124262183/locations/us-central1/builds/25057f13-0e77-4079-9e74-ec6db3e0cd00"},"done":false}
-[debug] [2026-01-26T04:11:05.689Z] [update-firebase-frameworks-netsystemsdc-1d977-us-central1-ssrnetsystemsdc1d977] Retrying task index 0
-[debug] [2026-01-26T04:11:05.690Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:11:05.690Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:11:05.690Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/netsystemsdc-1d977/locations/us-central1/operations/operation-1769400626215-64942afca797d-736babe7-fb4b5228 [none]
-[debug] [2026-01-26T04:11:05.948Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/netsystemsdc-1d977/locations/us-central1/operations/operation-1769400626215-64942afca797d-736babe7-fb4b5228 200
-[debug] [2026-01-26T04:11:05.948Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/netsystemsdc-1d977/locations/us-central1/operations/operation-1769400626215-64942afca797d-736babe7-fb4b5228 {"name":"projects/netsystemsdc-1d977/locations/us-central1/operations/operation-1769400626215-64942afca797d-736babe7-fb4b5228","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2026-01-26T04:10:27.204544731Z","target":"projects/netsystemsdc-1d977/locations/us-central1/functions/ssrnetsystemsdc1d977","verb":"update","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/netsystemsdc-1d977/locations/us-central1/functions/ssrnetsystemsdc1d977","buildConfig":{"runtime":"nodejs20","entryPoint":"ssrnetsystemsdc1d977","source":{"storageSource":{"bucket":"gcf-v2-sources-133124262183-us-central1","object":"ssrnetsystemsdc1d977/function-source.zip","generation":"1769400627111877"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRepository":"projects/netsystemsdc-1d977/locations/us-central1/repositories/gcf-artifacts","sourceProvenance":{"resolvedStorageSource":{"bucket":"gcf-v2-sources-133124262183-us-central1","object":"ssrnetsystemsdc1d977/function-source.zip","generation":"1769048353812849"}},"dockerRegistry":"ARTIFACT_REGISTRY","serviceAccount":"projects/netsystemsdc-1d977/serviceAccounts/133124262183-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/netsystemsdc-1d977/locations/us-central1/services/ssrnetsystemsdc1d977","timeoutSeconds":60,"environmentVariables":{"VERCEL_URL":"netsystemsdc-1d977.web.app","__FIREBASE_FRAMEWORKS_ENTRY__":"next.js","__FIREBASE_DEFAULTS__":"{\"config\":{\"projectId\":\"netsystemsdc-1d977\",\"appId\":\"1:133124262183:web:d62f68c133da37cc61c102\",\"storageBucket\":\"netsystemsdc-1d977.firebasestorage.app\",\"apiKey\":\"AIzaSyC4fvEv8goovWIDcM_OHGFVcFQSjz69VT8\",\"authDomain\":\"netsystemsdc-1d977.firebaseapp.com\",\"messagingSenderId\":\"133124262183\",\"measurementId\":\"G-K43S0Z2P9E\",\"projectNumber\":\"133124262183\",\"version\":\"2\"},\"_authTokenSyncURL\":\"/__session\"}","FIREBASE_CONFIG":"{\"projectId\":\"netsystemsdc-1d977\",\"storageBucket\":\"netsystemsdc-1d977.firebasestorage.app\"}","GCLOUD_PROJECT":"netsystemsdc-1d977","EVENTARC_CLOUD_EVENT_SOURCE":"projects/netsystemsdc-1d977/locations/us-central1/services/ssrnetsystemsdc1d977","FUNCTION_TARGET":"ssrnetsystemsdc1d977","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","serviceAccountEmail":"133124262183-compute@developer.gserviceaccount.com","availableMemory":"256Mi","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"state":"UNKNOWN","labels":{"firebase-functions-codebase":"firebase-frameworks-netsystemsdc-1d977","firebase-functions-hash":"ffe8c840cb449c85b6f194c70f44bd6221ccc214"},"stateMessages":[{"severity":"ERROR","type":"CloudRunServiceNotFound","message":"Cloud Run service projects/netsystemsdc-1d977/locations/us-central1/services/ssrnetsystemsdc1d977 for the function was not found. The function will not work correctly. Please redeploy."}],"environment":"GEN_2","url":"https://us-central1-netsystemsdc-1d977.cloudfunctions.net/ssrnetsystemsdc1d977","satisfiesPzi":true},"stages":[{"name":"BUILD","message":"Build in progress","state":"IN_PROGRESS","resource":"projects/133124262183/locations/us-central1/builds/25057f13-0e77-4079-9e74-ec6db3e0cd00","resourceUri":"https://console.cloud.google.com/cloud-build/builds;region=us-central1/25057f13-0e77-4079-9e74-ec6db3e0cd00?project=133124262183"},{"name":"SERVICE","state":"NOT_STARTED"}],"operationType":"UPDATE_FUNCTION","buildName":"projects/133124262183/locations/us-central1/builds/25057f13-0e77-4079-9e74-ec6db3e0cd00"},"done":false}
-[debug] [2026-01-26T04:11:15.955Z] [update-firebase-frameworks-netsystemsdc-1d977-us-central1-ssrnetsystemsdc1d977] Retrying task index 0
-[debug] [2026-01-26T04:11:15.956Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:11:15.956Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:11:15.956Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/netsystemsdc-1d977/locations/us-central1/operations/operation-1769400626215-64942afca797d-736babe7-fb4b5228 [none]
-[debug] [2026-01-26T04:11:16.337Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/netsystemsdc-1d977/locations/us-central1/operations/operation-1769400626215-64942afca797d-736babe7-fb4b5228 200
-[debug] [2026-01-26T04:11:16.337Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/netsystemsdc-1d977/locations/us-central1/operations/operation-1769400626215-64942afca797d-736babe7-fb4b5228 {"name":"projects/netsystemsdc-1d977/locations/us-central1/operations/operation-1769400626215-64942afca797d-736babe7-fb4b5228","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2026-01-26T04:10:27.204544731Z","target":"projects/netsystemsdc-1d977/locations/us-central1/functions/ssrnetsystemsdc1d977","verb":"update","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/netsystemsdc-1d977/locations/us-central1/functions/ssrnetsystemsdc1d977","buildConfig":{"runtime":"nodejs20","entryPoint":"ssrnetsystemsdc1d977","source":{"storageSource":{"bucket":"gcf-v2-sources-133124262183-us-central1","object":"ssrnetsystemsdc1d977/function-source.zip","generation":"1769400627111877"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRepository":"projects/netsystemsdc-1d977/locations/us-central1/repositories/gcf-artifacts","sourceProvenance":{"resolvedStorageSource":{"bucket":"gcf-v2-sources-133124262183-us-central1","object":"ssrnetsystemsdc1d977/function-source.zip","generation":"1769048353812849"}},"dockerRegistry":"ARTIFACT_REGISTRY","serviceAccount":"projects/netsystemsdc-1d977/serviceAccounts/133124262183-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/netsystemsdc-1d977/locations/us-central1/services/ssrnetsystemsdc1d977","timeoutSeconds":60,"environmentVariables":{"VERCEL_URL":"netsystemsdc-1d977.web.app","__FIREBASE_FRAMEWORKS_ENTRY__":"next.js","__FIREBASE_DEFAULTS__":"{\"config\":{\"projectId\":\"netsystemsdc-1d977\",\"appId\":\"1:133124262183:web:d62f68c133da37cc61c102\",\"storageBucket\":\"netsystemsdc-1d977.firebasestorage.app\",\"apiKey\":\"AIzaSyC4fvEv8goovWIDcM_OHGFVcFQSjz69VT8\",\"authDomain\":\"netsystemsdc-1d977.firebaseapp.com\",\"messagingSenderId\":\"133124262183\",\"measurementId\":\"G-K43S0Z2P9E\",\"projectNumber\":\"133124262183\",\"version\":\"2\"},\"_authTokenSyncURL\":\"/__session\"}","FIREBASE_CONFIG":"{\"projectId\":\"netsystemsdc-1d977\",\"storageBucket\":\"netsystemsdc-1d977.firebasestorage.app\"}","GCLOUD_PROJECT":"netsystemsdc-1d977","EVENTARC_CLOUD_EVENT_SOURCE":"projects/netsystemsdc-1d977/locations/us-central1/services/ssrnetsystemsdc1d977","FUNCTION_TARGET":"ssrnetsystemsdc1d977","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","serviceAccountEmail":"133124262183-compute@developer.gserviceaccount.com","availableMemory":"256Mi","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"state":"UNKNOWN","labels":{"firebase-functions-codebase":"firebase-frameworks-netsystemsdc-1d977","firebase-functions-hash":"ffe8c840cb449c85b6f194c70f44bd6221ccc214"},"stateMessages":[{"severity":"ERROR","type":"CloudRunServiceNotFound","message":"Cloud Run service projects/netsystemsdc-1d977/locations/us-central1/services/ssrnetsystemsdc1d977 for the function was not found. The function will not work correctly. Please redeploy."}],"environment":"GEN_2","url":"https://us-central1-netsystemsdc-1d977.cloudfunctions.net/ssrnetsystemsdc1d977","satisfiesPzi":true},"stages":[{"name":"BUILD","message":"Build in progress","state":"IN_PROGRESS","resource":"projects/133124262183/locations/us-central1/builds/25057f13-0e77-4079-9e74-ec6db3e0cd00","resourceUri":"https://console.cloud.google.com/cloud-build/builds;region=us-central1/25057f13-0e77-4079-9e74-ec6db3e0cd00?project=133124262183"},{"name":"SERVICE","state":"NOT_STARTED"}],"operationType":"UPDATE_FUNCTION","buildName":"projects/133124262183/locations/us-central1/builds/25057f13-0e77-4079-9e74-ec6db3e0cd00"},"done":false}
-[debug] [2026-01-26T04:11:26.354Z] [update-firebase-frameworks-netsystemsdc-1d977-us-central1-ssrnetsystemsdc1d977] Retrying task index 0
-[debug] [2026-01-26T04:11:26.355Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:11:26.355Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:11:26.355Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/netsystemsdc-1d977/locations/us-central1/operations/operation-1769400626215-64942afca797d-736babe7-fb4b5228 [none]
-[debug] [2026-01-26T04:11:26.714Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/netsystemsdc-1d977/locations/us-central1/operations/operation-1769400626215-64942afca797d-736babe7-fb4b5228 200
-[debug] [2026-01-26T04:11:26.714Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/netsystemsdc-1d977/locations/us-central1/operations/operation-1769400626215-64942afca797d-736babe7-fb4b5228 {"name":"projects/netsystemsdc-1d977/locations/us-central1/operations/operation-1769400626215-64942afca797d-736babe7-fb4b5228","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2026-01-26T04:10:27.204544731Z","target":"projects/netsystemsdc-1d977/locations/us-central1/functions/ssrnetsystemsdc1d977","verb":"update","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/netsystemsdc-1d977/locations/us-central1/functions/ssrnetsystemsdc1d977","buildConfig":{"runtime":"nodejs20","entryPoint":"ssrnetsystemsdc1d977","source":{"storageSource":{"bucket":"gcf-v2-sources-133124262183-us-central1","object":"ssrnetsystemsdc1d977/function-source.zip","generation":"1769400627111877"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRepository":"projects/netsystemsdc-1d977/locations/us-central1/repositories/gcf-artifacts","sourceProvenance":{"resolvedStorageSource":{"bucket":"gcf-v2-sources-133124262183-us-central1","object":"ssrnetsystemsdc1d977/function-source.zip","generation":"1769048353812849"}},"dockerRegistry":"ARTIFACT_REGISTRY","serviceAccount":"projects/netsystemsdc-1d977/serviceAccounts/133124262183-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/netsystemsdc-1d977/locations/us-central1/services/ssrnetsystemsdc1d977","timeoutSeconds":60,"environmentVariables":{"VERCEL_URL":"netsystemsdc-1d977.web.app","__FIREBASE_FRAMEWORKS_ENTRY__":"next.js","__FIREBASE_DEFAULTS__":"{\"config\":{\"projectId\":\"netsystemsdc-1d977\",\"appId\":\"1:133124262183:web:d62f68c133da37cc61c102\",\"storageBucket\":\"netsystemsdc-1d977.firebasestorage.app\",\"apiKey\":\"AIzaSyC4fvEv8goovWIDcM_OHGFVcFQSjz69VT8\",\"authDomain\":\"netsystemsdc-1d977.firebaseapp.com\",\"messagingSenderId\":\"133124262183\",\"measurementId\":\"G-K43S0Z2P9E\",\"projectNumber\":\"133124262183\",\"version\":\"2\"},\"_authTokenSyncURL\":\"/__session\"}","FIREBASE_CONFIG":"{\"projectId\":\"netsystemsdc-1d977\",\"storageBucket\":\"netsystemsdc-1d977.firebasestorage.app\"}","GCLOUD_PROJECT":"netsystemsdc-1d977","EVENTARC_CLOUD_EVENT_SOURCE":"projects/netsystemsdc-1d977/locations/us-central1/services/ssrnetsystemsdc1d977","FUNCTION_TARGET":"ssrnetsystemsdc1d977","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","serviceAccountEmail":"133124262183-compute@developer.gserviceaccount.com","availableMemory":"256Mi","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"state":"UNKNOWN","labels":{"firebase-functions-codebase":"firebase-frameworks-netsystemsdc-1d977","firebase-functions-hash":"ffe8c840cb449c85b6f194c70f44bd6221ccc214"},"stateMessages":[{"severity":"ERROR","type":"CloudRunServiceNotFound","message":"Cloud Run service projects/netsystemsdc-1d977/locations/us-central1/services/ssrnetsystemsdc1d977 for the function was not found. The function will not work correctly. Please redeploy."}],"environment":"GEN_2","url":"https://us-central1-netsystemsdc-1d977.cloudfunctions.net/ssrnetsystemsdc1d977","satisfiesPzi":true},"stages":[{"name":"BUILD","message":"Build in progress","state":"IN_PROGRESS","resource":"projects/133124262183/locations/us-central1/builds/25057f13-0e77-4079-9e74-ec6db3e0cd00","resourceUri":"https://console.cloud.google.com/cloud-build/builds;region=us-central1/25057f13-0e77-4079-9e74-ec6db3e0cd00?project=133124262183"},{"name":"SERVICE","state":"NOT_STARTED"}],"operationType":"UPDATE_FUNCTION","buildName":"projects/133124262183/locations/us-central1/builds/25057f13-0e77-4079-9e74-ec6db3e0cd00"},"done":false}
-[debug] [2026-01-26T04:11:36.719Z] [update-firebase-frameworks-netsystemsdc-1d977-us-central1-ssrnetsystemsdc1d977] Retrying task index 0
-[debug] [2026-01-26T04:11:36.719Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:11:36.719Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:11:36.719Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/netsystemsdc-1d977/locations/us-central1/operations/operation-1769400626215-64942afca797d-736babe7-fb4b5228 [none]
-[debug] [2026-01-26T04:11:37.141Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/netsystemsdc-1d977/locations/us-central1/operations/operation-1769400626215-64942afca797d-736babe7-fb4b5228 200
-[debug] [2026-01-26T04:11:37.141Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/netsystemsdc-1d977/locations/us-central1/operations/operation-1769400626215-64942afca797d-736babe7-fb4b5228 {"name":"projects/netsystemsdc-1d977/locations/us-central1/operations/operation-1769400626215-64942afca797d-736babe7-fb4b5228","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2026-01-26T04:10:27.204544731Z","endTime":"2026-01-26T04:11:28.650158860Z","target":"projects/netsystemsdc-1d977/locations/us-central1/functions/ssrnetsystemsdc1d977","verb":"update","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/netsystemsdc-1d977/locations/us-central1/functions/ssrnetsystemsdc1d977","buildConfig":{"runtime":"nodejs20","entryPoint":"ssrnetsystemsdc1d977","source":{"storageSource":{"bucket":"gcf-v2-sources-133124262183-us-central1","object":"ssrnetsystemsdc1d977/function-source.zip","generation":"1769400627111877"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRepository":"projects/netsystemsdc-1d977/locations/us-central1/repositories/gcf-artifacts","sourceProvenance":{"resolvedStorageSource":{"bucket":"gcf-v2-sources-133124262183-us-central1","object":"ssrnetsystemsdc1d977/function-source.zip","generation":"1769048353812849"}},"dockerRegistry":"ARTIFACT_REGISTRY","serviceAccount":"projects/netsystemsdc-1d977/serviceAccounts/133124262183-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/netsystemsdc-1d977/locations/us-central1/services/ssrnetsystemsdc1d977","timeoutSeconds":60,"environmentVariables":{"VERCEL_URL":"netsystemsdc-1d977.web.app","__FIREBASE_FRAMEWORKS_ENTRY__":"next.js","__FIREBASE_DEFAULTS__":"{\"config\":{\"projectId\":\"netsystemsdc-1d977\",\"appId\":\"1:133124262183:web:d62f68c133da37cc61c102\",\"storageBucket\":\"netsystemsdc-1d977.firebasestorage.app\",\"apiKey\":\"AIzaSyC4fvEv8goovWIDcM_OHGFVcFQSjz69VT8\",\"authDomain\":\"netsystemsdc-1d977.firebaseapp.com\",\"messagingSenderId\":\"133124262183\",\"measurementId\":\"G-K43S0Z2P9E\",\"projectNumber\":\"133124262183\",\"version\":\"2\"},\"_authTokenSyncURL\":\"/__session\"}","FIREBASE_CONFIG":"{\"projectId\":\"netsystemsdc-1d977\",\"storageBucket\":\"netsystemsdc-1d977.firebasestorage.app\"}","GCLOUD_PROJECT":"netsystemsdc-1d977","EVENTARC_CLOUD_EVENT_SOURCE":"projects/netsystemsdc-1d977/locations/us-central1/services/ssrnetsystemsdc1d977","FUNCTION_TARGET":"ssrnetsystemsdc1d977","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","serviceAccountEmail":"133124262183-compute@developer.gserviceaccount.com","availableMemory":"256Mi","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"state":"UNKNOWN","labels":{"firebase-functions-codebase":"firebase-frameworks-netsystemsdc-1d977","firebase-functions-hash":"ffe8c840cb449c85b6f194c70f44bd6221ccc214"},"stateMessages":[{"severity":"ERROR","type":"CloudRunServiceNotFound","message":"Cloud Run service projects/netsystemsdc-1d977/locations/us-central1/services/ssrnetsystemsdc1d977 for the function was not found. The function will not work correctly. Please redeploy."}],"environment":"GEN_2","url":"https://us-central1-netsystemsdc-1d977.cloudfunctions.net/ssrnetsystemsdc1d977","satisfiesPzi":true},"stages":[{"name":"SERVICE","state":"NOT_STARTED"}],"operationType":"UPDATE_FUNCTION"},"done":true,"error":{"code":13,"message":"Build failed with status: FAILURE and message: An unexpected error occurred. Refer to build logs: https://console.cloud.google.com/cloud-build/builds;region=us-central1/25057f13-0e77-4079-9e74-ec6db3e0cd00?project=133124262183. For more details see the logs at https://console.cloud.google.com/cloud-build/builds;region=us-central1/25057f13-0e77-4079-9e74-ec6db3e0cd00?project=133124262183."}}
-[debug] [2026-01-26T04:11:37.141Z] Got source token undefined for region us-central1
-[error] Build failed with status: FAILURE and message: An unexpected error occurred. Refer to build logs: https://console.cloud.google.com/cloud-build/builds;region=us-central1/25057f13-0e77-4079-9e74-ec6db3e0cd00?project=133124262183. For more details see the logs at https://console.cloud.google.com/cloud-build/builds;region=us-central1/25057f13-0e77-4079-9e74-ec6db3e0cd00?project=133124262183.
-[debug] [2026-01-26T04:11:37.147Z] Total Function Deployment time: 70670
-[debug] [2026-01-26T04:11:37.147Z] 1 Functions Deployed
-[debug] [2026-01-26T04:11:37.147Z] 1 Functions Errored
-[debug] [2026-01-26T04:11:37.147Z] 0 Function Deployments Aborted
-[debug] [2026-01-26T04:11:37.147Z] Average Function Deployment time: 70669
-[info] 
-[info] Functions deploy had errors with the following functions:
-	firebase-frameworks-netsystemsdc-1d977:ssrnetsystemsdc1d977(us-central1)
-[debug] [2026-01-26T04:11:37.379Z] Not printing URL for HTTPS function. Typically this means it didn't match a filter or we failed deployment
-[debug] [2026-01-26T04:11:37.379Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:11:37.379Z] Checked if tokens are valid: true, expires at: 1769403999138
-[debug] [2026-01-26T04:11:37.379Z] >>> [apiv2][query] GET https://artifactregistry.googleapis.com/v1/projects/netsystemsdc-1d977/locations/us-central1/repositories/gcf-artifacts [none]
-[debug] [2026-01-26T04:11:37.991Z] <<< [apiv2][status] GET https://artifactregistry.googleapis.com/v1/projects/netsystemsdc-1d977/locations/us-central1/repositories/gcf-artifacts 200
-[debug] [2026-01-26T04:11:37.991Z] <<< [apiv2][body] GET https://artifactregistry.googleapis.com/v1/projects/netsystemsdc-1d977/locations/us-central1/repositories/gcf-artifacts {"name":"projects/netsystemsdc-1d977/locations/us-central1/repositories/gcf-artifacts","format":"DOCKER","description":"This repository is created and used by Cloud Functions for storing function docker images.","labels":{"goog-managed-by":"cloudfunctions"},"createTime":"2026-01-22T01:58:55.417029Z","updateTime":"2026-01-22T02:00:42.499482Z","mode":"STANDARD_REPOSITORY","cleanupPolicies":{"firebase-functions-cleanup":{"id":"firebase-functions-cleanup","action":"DELETE","condition":{"tagState":"ANY","olderThan":"1209600s"}}},"vulnerabilityScanningConfig":{"lastEnableTime":"2026-01-22T01:58:45.381995158Z","enablementState":"SCANNING_DISABLED","enablementStateReason":"API containerscanning.googleapis.com is not enabled."},"satisfiesPzi":true,"registryUri":"us-central1-docker.pkg.dev/netsystemsdc-1d977/gcf-artifacts"}
-[debug] [2026-01-26T04:11:37.991Z] Functions deploy failed.
-[debug] [2026-01-26T04:11:37.991Z] {
-  "endpoint": {
-    "id": "ssrnetsystemsdc1d977",
-    "project": "netsystemsdc-1d977",
-    "region": "us-central1",
-    "entryPoint": "ssrnetsystemsdc1d977",
-    "platform": "gcfv2",
-    "runtime": "nodejs20",
-    "httpsTrigger": {},
-    "labels": {
-      "deployment-tool": "cli-firebase"
-    },
-    "serviceAccount": null,
-    "ingressSettings": null,
-    "availableMemoryMb": null,
-    "timeoutSeconds": null,
-    "maxInstances": null,
-    "minInstances": null,
-    "concurrency": 80,
-    "vpc": null,
-    "environmentVariables": {
-      "VERCEL_URL": "netsystemsdc-1d977.web.app",
-      "__FIREBASE_FRAMEWORKS_ENTRY__": "next.js",
-      "__FIREBASE_DEFAULTS__": "{\"config\":{\"projectId\":\"netsystemsdc-1d977\",\"appId\":\"1:133124262183:web:d62f68c133da37cc61c102\",\"storageBucket\":\"netsystemsdc-1d977.firebasestorage.app\",\"apiKey\":\"AIzaSyC4fvEv8goovWIDcM_OHGFVcFQSjz69VT8\",\"authDomain\":\"netsystemsdc-1d977.firebaseapp.com\",\"messagingSenderId\":\"133124262183\",\"measurementId\":\"G-K43S0Z2P9E\",\"projectNumber\":\"133124262183\",\"version\":\"2\"},\"_authTokenSyncURL\":\"/__session\"}",
-      "FIREBASE_CONFIG": "{\"projectId\":\"netsystemsdc-1d977\",\"storageBucket\":\"netsystemsdc-1d977.firebasestorage.app\"}",
-      "GCLOUD_PROJECT": "netsystemsdc-1d977",
-      "EVENTARC_CLOUD_EVENT_SOURCE": "projects/netsystemsdc-1d977/locations/us-central1/services/ssrnetsystemsdc1d977"
-    },
-    "codebase": "firebase-frameworks-netsystemsdc-1d977",
-    "securityLevel": "SECURE_ALWAYS",
-    "cpu": 1,
-    "targetedByOnly": false,
-    "hash": "ffe8c840cb449c85b6f194c70f44bd6221ccc214"
-  },
-  "op": "update",
-  "original": {
-    "name": "FirebaseError",
-    "children": [],
-    "exit": 1,
-    "message": "Build failed with status: FAILURE and message: An unexpected error occurred. Refer to build logs: https://console.cloud.google.com/cloud-build/builds;region=us-central1/25057f13-0e77-4079-9e74-ec6db3e0cd00?project=133124262183. For more details see the logs at https://console.cloud.google.com/cloud-build/builds;region=us-central1/25057f13-0e77-4079-9e74-ec6db3e0cd00?project=133124262183.",
-    "original": {
-      "code": 13,
-      "message": "Build failed with status: FAILURE and message: An unexpected error occurred. Refer to build logs: https://console.cloud.google.com/cloud-build/builds;region=us-central1/25057f13-0e77-4079-9e74-ec6db3e0cd00?project=133124262183. For more details see the logs at https://console.cloud.google.com/cloud-build/builds;region=us-central1/25057f13-0e77-4079-9e74-ec6db3e0cd00?project=133124262183."
-    },
-    "status": 13,
-    "code": 13
-  }
-}
-[debug] [2026-01-26T04:11:38.060Z] Error: Failed to update function ssrnetsystemsdc1d977 in region us-central1
-    at C:\Users\netpr\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:441:19
-    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
-    at async Fabricator.updateV2Function (C:\Users\netpr\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:425:32)
-    at async Fabricator.updateEndpoint (C:\Users\netpr\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:161:13)
-    at async handle (C:\Users\netpr\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:90:17)
-[error] 
-[error] Error: There was an error deploying functions
+[debug] [2026-01-26T05:01:43.530Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-01-26T05:01:43.530Z] > authorizing via signed-in user (startup@creativa.rocks)
+[debug] [2026-01-26T05:01:43.530Z] [iam] checking project netsystemsdc-1d977 for permissions ["firebase.projects.get","firebaseextensions.instances.list"]
+[debug] [2026-01-26T05:01:43.530Z] Checked if tokens are valid: true, expires at: 1769407223989
+[debug] [2026-01-26T05:01:43.531Z] Checked if tokens are valid: true, expires at: 1769407223989
+[debug] [2026-01-26T05:01:43.531Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/netsystemsdc-1d977:testIamPermissions [none]
+[debug] [2026-01-26T05:01:43.531Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/netsystemsdc-1d977:testIamPermissions x-goog-quota-user=projects/netsystemsdc-1d977
+[debug] [2026-01-26T05:01:43.531Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/netsystemsdc-1d977:testIamPermissions {"permissions":["firebase.projects.get","firebaseextensions.instances.list"]}
+[debug] [2026-01-26T05:01:44.042Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/netsystemsdc-1d977:testIamPermissions 200
+[debug] [2026-01-26T05:01:44.042Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/netsystemsdc-1d977:testIamPermissions {"permissions":["firebase.projects.get","firebaseextensions.instances.list"]}
+[debug] [2026-01-26T05:01:44.043Z] Checked if tokens are valid: true, expires at: 1769407223989
+[debug] [2026-01-26T05:01:44.043Z] Checked if tokens are valid: true, expires at: 1769407223989
+[debug] [2026-01-26T05:01:44.043Z] >>> [apiv2][query] GET https://firebaseextensions.googleapis.com/v1beta/projects/netsystemsdc-1d977/instances pageSize=100&pageToken=
+[debug] [2026-01-26T05:01:44.929Z] <<< [apiv2][status] GET https://firebaseextensions.googleapis.com/v1beta/projects/netsystemsdc-1d977/instances 200
+[debug] [2026-01-26T05:01:44.929Z] <<< [apiv2][body] GET https://firebaseextensions.googleapis.com/v1beta/projects/netsystemsdc-1d977/instances {}

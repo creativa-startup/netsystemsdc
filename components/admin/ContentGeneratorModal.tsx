@@ -5,6 +5,7 @@ import { X, Sparkles, Loader2, Wand2, Calculator, Check, AlertCircle } from 'luc
 import { doc, writeBatch, collection, getDoc } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
 import { getContrastColor } from '@/lib/colors';
+import { getFunctions, httpsCallable } from 'firebase/functions';
 
 interface ContentGeneratorModalProps {
     isOpen: boolean;
@@ -28,17 +29,11 @@ export default function ContentGeneratorModal({ isOpen, onClose, onSuccess }: Co
         setError('');
 
         try {
-            const response = await fetch('/api/generate-content', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ prompt })
-            });
+            const functions = getFunctions(undefined, 'us-central1');
+            const generateContentFn = httpsCallable(functions, 'generateContent');
 
-            const data = await response.json();
-
-            if (!response.ok) {
-                throw new Error(data.error || 'Error al generar contenido');
-            }
+            const result = await generateContentFn({ prompt });
+            const data = result.data;
 
             setGeneratedData(data);
             setStep('preview');

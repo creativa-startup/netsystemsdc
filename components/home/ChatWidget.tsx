@@ -7,7 +7,7 @@ import {
 import { db } from '@/lib/firebase';
 import { MessageCircle, X, Send, User, Loader2, Minus } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { processChat } from '@/app/actions/chatAgent';
+import { getFunctions, httpsCallable } from 'firebase/functions';
 
 export default function ChatWidget() {
     const [isOpen, setIsOpen] = useState(false);
@@ -159,15 +159,22 @@ export default function ChatWidget() {
 
             // Trigger AI Agent
             setIsBotTyping(true);
-            processChat(chatId, text, { name, email })
-                .then(res => {
-                    console.log("processChat result:", res);
-                    setIsBotTyping(false);
-                })
-                .catch(err => {
-                    console.error("AI Agent Error (Client Side):", err);
-                    setIsBotTyping(false);
+
+            try {
+                const functions = getFunctions(undefined, 'us-central1');
+                const chatAgentFn = httpsCallable(functions, 'chatAgent');
+
+                await chatAgentFn({
+                    chatId,
+                    message: text,
+                    userInfo: { name, email }
                 });
+
+                setIsBotTyping(false);
+            } catch (err) {
+                console.error("AI Agent Error (Client Side):", err);
+                setIsBotTyping(false);
+            }
 
         } catch (error) {
             console.error("Error sending message:", error);

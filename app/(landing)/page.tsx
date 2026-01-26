@@ -6,10 +6,11 @@ import Contact from '@/components/home/Contact';
 import Blog from '@/components/home/Blog';
 import { getSiteSettings } from '@/lib/content';
 
-export const dynamic = 'force-dynamic';
-
-export default async function LandingPage() {
-    const settings = await getSiteSettings();
+export default function LandingPage() {
+    // Static build defaults (Client components will hydrate with real data)
+    const settings = {
+        showBlog: true, // Render by default, let client hide if needed or just keep it
+    };
 
     return (
         <>

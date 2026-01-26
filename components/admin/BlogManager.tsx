@@ -188,7 +188,7 @@ export default function BlogManager() {
 import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 import { storage } from '@/lib/firebase';
 import { setDoc, addDoc } from 'firebase/firestore';
-import { generateBlogContent } from '@/app/actions/generateContent';
+import { getFunctions, httpsCallable } from 'firebase/functions';
 
 function BlogEditor({ post, onBack, onSave }: { post: any, onBack: () => void, onSave: () => void }) {
     const [title, setTitle] = useState(post?.title || '');
@@ -223,31 +223,26 @@ function BlogEditor({ post, onBack, onSave }: { post: any, onBack: () => void, o
         if (!promptInput) return alert("Escribe una instrucción para la IA primero");
         setGenerating(true);
 
-        const result = await generateBlogContent(promptInput);
+        try {
+            const functions = getFunctions(undefined, 'us-central1');
+            const generateBlogContentFn = httpsCallable(functions, 'generateBlogContent');
 
-        if (result.error) {
-            alert("Error IA: " + result.error);
-        } else {
-            try {
-                // Attempt to parse content as JSON
-                const parsedContent = JSON.parse(result.content);
-                if (parsedContent.content) setContent(parsedContent.content);
-                if (parsedContent.slug) setSlug(parsedContent.slug);
-                if (parsedContent.metaTitle) setMetaTitle(parsedContent.metaTitle);
-                if (parsedContent.metaDescription) setMetaDescription(parsedContent.metaDescription);
-            } catch (e) {
-                // If not JSON, treat as plain text content
-                if (result.content) {
-                    setContent(result.content);
-                    // Try to guess SEO fields if they are missing in a plain text response (fallback)
-                    if (!metaTitle) setMetaTitle(title.substring(0, 60));
-                    if (!metaDescription) setMetaDescription(result.content.substring(0, 150));
-                }
+            const result = await generateBlogContentFn({ prompt: promptInput });
+            const data: any = result.data; // Cast result data
+
+            if (data.error) {
+                alert("Error IA: " + data.error);
+            } else {
+                // The function returns the parsed JSON object directly as data
+                // Or { content: text } if fallback
+                if (data.content) setContent(data.content);
+                if (data.slug) setSlug(data.slug);
+                if (data.metaTitle) setMetaTitle(data.metaTitle);
+                if (data.metaDescription) setMetaDescription(data.metaDescription);
             }
-            // Also check for direct properties on the result object, in case the AI function returns structured data directly
-            if (result.slug) setSlug(result.slug);
-            if (result.metaTitle) setMetaTitle(result.metaTitle);
-            if (result.metaDescription) setMetaDescription(result.metaDescription);
+        } catch (e: any) {
+            console.error("Generate error:", e);
+            alert("Error al generar: " + e.message);
         }
 
         setGenerating(false);
