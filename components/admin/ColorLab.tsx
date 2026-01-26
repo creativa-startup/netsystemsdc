@@ -211,7 +211,7 @@ export default function ColorLab() {
                         {activeColorPicker === 'primary' && (
                             <div className="absolute z-50 top-12 left-0">
                                 <div className="fixed inset-0" onClick={() => setActiveColorPicker(null)} />
-                                <ChromePicker color={colorState.primary} onChange={(c) => setColorState({ ...colorState, primary: c.hex })} />
+                                <ChromePicker color={colorState.primary} onChange={(c: any) => setColorState({ ...colorState, primary: c.hex })} />
                             </div>
                         )}
                     </div>
@@ -238,7 +238,7 @@ export default function ColorLab() {
                             {activeColorPicker === item.id && (
                                 <div className="absolute z-50 top-12 left-0">
                                     <div className="fixed inset-0" onClick={() => setActiveColorPicker(null)} />
-                                    <ChromePicker color={item.val} onChange={(c) => setColorState({ ...colorState, [item.id]: c.hex })} />
+                                    <ChromePicker color={item.val} onChange={(c: any) => setColorState({ ...colorState, [item.id]: c.hex })} />
                                 </div>
                             )}
                         </div>

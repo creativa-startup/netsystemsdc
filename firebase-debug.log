@@ -1,0 +1,87 @@
+[debug] [2026-01-26T03:15:52.070Z] ----------------------------------------------------------------------
+[debug] [2026-01-26T03:15:52.072Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\netpr\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2026-01-26T03:15:52.072Z] CLI Version:   15.3.1
+[debug] [2026-01-26T03:15:52.072Z] Platform:      win32
+[debug] [2026-01-26T03:15:52.072Z] Node Version:  v24.13.0
+[debug] [2026-01-26T03:15:52.072Z] Time:          Sun Jan 25 2026 22:15:52 GMT-0500 (hora de Ecuador)
+[debug] [2026-01-26T03:15:52.072Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-01-26T03:15:53.958Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-01-26T03:15:53.959Z] > authorizing via signed-in user (startup@creativa.rocks)
+[debug] [2026-01-26T03:15:53.959Z] [iam] checking project netsystemsdc-1d977 for permissions ["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update",null]
+[debug] [2026-01-26T03:15:53.960Z] Checked if tokens are valid: false, expires at: 1769384857268
+[debug] [2026-01-26T03:15:53.960Z] Checked if tokens are valid: false, expires at: 1769384857268
+[debug] [2026-01-26T03:15:53.960Z] > refreshing access token with scopes: []
+[debug] [2026-01-26T03:15:53.962Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2026-01-26T03:15:53.962Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-01-26T03:15:54.225Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2026-01-26T03:15:54.225Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-01-26T03:15:54.234Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/netsystemsdc-1d977:testIamPermissions [none]
+[debug] [2026-01-26T03:15:54.234Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/netsystemsdc-1d977:testIamPermissions x-goog-quota-user=projects/netsystemsdc-1d977
+[debug] [2026-01-26T03:15:54.234Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/netsystemsdc-1d977:testIamPermissions {"permissions":["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update",null]}
+[debug] [2026-01-26T03:15:54.850Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/netsystemsdc-1d977:testIamPermissions 200
+[debug] [2026-01-26T03:15:54.850Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/netsystemsdc-1d977:testIamPermissions {"permissions":["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2026-01-26T03:15:54.851Z] [iam] error while checking permissions, command may fail: Authorization failed. This account is missing the following required permissions on project netsystemsdc-1d977:
+
+  
+[debug] [2026-01-26T03:15:54.851Z] Checked if tokens are valid: true, expires at: 1769400953225
+[debug] [2026-01-26T03:15:54.851Z] Checked if tokens are valid: true, expires at: 1769400953225
+[debug] [2026-01-26T03:15:54.852Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/netsystemsdc-1d977 [none]
+[debug] [2026-01-26T03:15:55.305Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/netsystemsdc-1d977 200
+[debug] [2026-01-26T03:15:55.305Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/netsystemsdc-1d977 {"projectId":"netsystemsdc-1d977","projectNumber":"133124262183","displayName":"NetSystemsDc","name":"projects/netsystemsdc-1d977","resources":{"hostingSite":"netsystemsdc-1d977"},"state":"ACTIVE","etag":"1_b6b58955-8a05-4897-8265-2aa03e4452f7"}
+[debug] [2026-01-26T03:15:57.251Z] Checked if tokens are valid: true, expires at: 1769400953225
+[debug] [2026-01-26T03:15:57.251Z] Checked if tokens are valid: true, expires at: 1769400953225
+[debug] [2026-01-26T03:15:57.251Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/netsystemsdc-1d977/sites pageToken=&pageSize=10
+[debug] [2026-01-26T03:15:58.172Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/netsystemsdc-1d977/sites 200
+[debug] [2026-01-26T03:15:58.173Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/netsystemsdc-1d977/sites {"sites":[{"name":"projects/netsystemsdc-1d977/sites/netsystemsdc-1d977","defaultUrl":"https://netsystemsdc-1d977.web.app","appId":"1:133124262183:web:d62f68c133da37cc61c102","type":"DEFAULT_SITE"}]}
+[debug] [2026-01-26T03:15:58.173Z] Checked if tokens are valid: true, expires at: 1769400953225
+[debug] [2026-01-26T03:15:58.173Z] Checked if tokens are valid: true, expires at: 1769400953225
+[debug] [2026-01-26T03:15:58.173Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:133124262183:web:d62f68c133da37cc61c102/config [none]
+[debug] [2026-01-26T03:15:58.463Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:133124262183:web:d62f68c133da37cc61c102/config 200
+[debug] [2026-01-26T03:15:58.463Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:133124262183:web:d62f68c133da37cc61c102/config {"projectId":"netsystemsdc-1d977","appId":"1:133124262183:web:d62f68c133da37cc61c102","storageBucket":"netsystemsdc-1d977.firebasestorage.app","apiKey":"AIzaSyC4fvEv8goovWIDcM_OHGFVcFQSjz69VT8","authDomain":"netsystemsdc-1d977.firebaseapp.com","messagingSenderId":"133124262183","measurementId":"G-K43S0Z2P9E","projectNumber":"133124262183","version":"2"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+   The integration is known to work with Next.js version 12 - 15.0. You may encounter errors.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2026-01-26T03:16:02.367Z] Checked if tokens are valid: true, expires at: 1769400953225
+[debug] [2026-01-26T03:16:02.368Z] Checked if tokens are valid: true, expires at: 1769400953225
+[debug] [2026-01-26T03:16:02.368Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/netsystemsdc-1d977/sites/netsystemsdc-1d977 [none]
+[debug] [2026-01-26T03:16:02.540Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/netsystemsdc-1d977/sites/netsystemsdc-1d977 200
+[debug] [2026-01-26T03:16:02.541Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/netsystemsdc-1d977/sites/netsystemsdc-1d977 {"name":"projects/netsystemsdc-1d977/sites/netsystemsdc-1d977","defaultUrl":"https://netsystemsdc-1d977.web.app","appId":"1:133124262183:web:d62f68c133da37cc61c102","type":"DEFAULT_SITE"}
+[info] ▲ Next.js 16.1.4 (Turbopack)
+
+[info] - Environments: .env.local
+
+
+[info]   Creating an optimized production build ...
+
+[info] ✓ Compiled successfully in 11.6s
+
+[info]   Running TypeScript ...
+
+[info] Failed to compile.
+
+
+[info] ./components/admin/ColorLab.tsx:214:85
+Type error: Parameter 'c' implicitly has an 'any' type.
+
+  212 |                             <div className="absolute z-50 top-12 left-0">
+  213 |                                 <div className="fixed inset-0" onClick={() => setActiveColorPicker(null)} />
+> 214 |                                 <ChromePicker color={colorState.primary} onChange={(c) => setColorState({ ...colorState, primary: c.hex })} />
+      |                                                                                     ^
+  215 |                             </div>
+  216 |                         )}
+  217 |                     </div>
+
+[info] Next.js build worker exited with code: 1 and signal: null
+
+[debug] [2026-01-26T03:16:23.523Z] Error: ENOENT: no such file or directory, open 'C:\Users\netpr\OneDrive\Documentos\NetSystemsDc\Web App\.next\export-marker.json'
+[error] 
+[error] Error: An unexpected error has occurred.
