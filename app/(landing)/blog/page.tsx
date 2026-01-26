@@ -1,4 +1,4 @@
-import { collection, getDocs, query, orderBy } from 'firebase/firestore';
+import { collection, getDocs, query, orderBy, where } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -8,15 +8,22 @@ export const revalidate = 60;
 
 async function getPosts() {
     try {
-        const postsRef = collection(db, 'posts');
-        // If query fails (e.g. index missing), fallback? 
-        // For now, simpler query or try-catch.
-        const q = query(postsRef); //, orderBy('date', 'desc')); // Let's keep it simple first
+        const postsRef = collection(db, 'blog_posts');
+        // Filter by status, sort client-side to avoid index error
+        const q = query(postsRef, where('status', '==', 'published'));
         const snapshot = await getDocs(q);
-        return snapshot.docs.map(doc => ({
+
+        const posts = snapshot.docs.map(doc => ({
             id: doc.id,
             ...doc.data()
         })) as any[];
+
+        // Sort by date desc
+        return posts.sort((a, b) => {
+            const dateA = a.date?.seconds ? new Date(a.date.seconds * 1000).getTime() : new Date(a.date).getTime();
+            const dateB = b.date?.seconds ? new Date(b.date.seconds * 1000).getTime() : new Date(b.date).getTime();
+            return dateB - dateA;
+        });
     } catch (error) {
         console.error("Error fetching posts:", error);
         return [];
@@ -45,13 +52,13 @@ export default async function BlogIndex() {
                         {posts.map((post) => (
                             <Link
                                 key={post.id}
-                                href={`/blog/${post.slug || post.id}`}
+                                href={`/blog/${post.category ? post.category.toLowerCase().replace(/\s+/g, '-') : 'general'}/${post.slug || post.id}`}
                                 className="group flex flex-col bg-white dark:bg-gray-900 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-800"
                             >
                                 <div className="relative h-60 w-full overflow-hidden bg-gray-200 dark:bg-gray-800">
-                                    {post.image ? (
+                                    {post.image_url ? (
                                         <Image
-                                            src={post.image}
+                                            src={post.image_url}
                                             alt={post.title}
                                             fill
                                             className="object-cover group-hover:scale-105 transition-transform duration-500"

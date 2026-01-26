@@ -1,5 +1,7 @@
-import Header from '@/components/landing/Header';
-import Footer from '@/components/landing/Footer';
+import Navbar from '@/components/layout/Navbar';
+import Footer from '@/components/layout/Footer';
+import ChatWidget from '@/components/home/ChatWidget';
+import DynamicBackground from '@/components/layout/DynamicBackground';
 
 export default function LandingLayout({
     children,
@@ -8,11 +10,13 @@ export default function LandingLayout({
 }) {
     return (
         <>
-            <Header />
+            <DynamicBackground />
+            <Navbar />
             <main className="min-h-screen">
                 {children}
             </main>
             <Footer />
+            <ChatWidget />
         </>
     );
 }

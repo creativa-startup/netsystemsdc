@@ -1,0 +1,20 @@
+[
+    {
+        "origin": [
+            "http://localhost:3000",
+            "https://netsystemsdc-1d977.web.app",
+            "https://netsystemsdc-1d977.firebaseapp.com"
+        ],
+        "method": [
+            "GET",
+            "PUT",
+            "POST",
+            "DELETE",
+            "HEAD"
+        ],
+        "responseHeader": [
+            "Content-Type"
+        ],
+        "maxAgeSeconds": 3600
+    }
+]

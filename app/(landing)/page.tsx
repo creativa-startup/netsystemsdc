@@ -1,19 +1,38 @@
-import HeroSection from '@/components/landing/HeroSection';
-import SolutionsGrid from '@/components/landing/SolutionsGrid';
-import Catalog from '@/components/landing/Catalog';
-import BlogSection from '@/components/landing/BlogSection';
-import ContactSection from '@/components/landing/ContactSection';
+import Hero from '@/components/home/Hero';
+import Features from '@/components/home/Features';
+import About from '@/components/home/About';
+import Showcase from '@/components/home/Showcase';
+import Contact from '@/components/home/Contact';
+import Blog from '@/components/home/Blog';
+import { getSiteSettings } from '@/lib/content';
 
 export const dynamic = 'force-dynamic';
 
-export default function LandingPage() {
+export default async function LandingPage() {
+    const settings = await getSiteSettings();
+
     return (
         <>
-            <HeroSection />
-            <SolutionsGrid />
-            <Catalog />
-            <BlogSection />
-            <ContactSection />
+            <section id="hero">
+                <Hero />
+            </section>
+            <section id="features">
+                <Features />
+            </section>
+            <section id="about">
+                <About />
+            </section>
+            <section id="showcase">
+                <Showcase />
+            </section>
+            <section id="contact">
+                <Contact />
+            </section>
+            {settings.showBlog && (
+                <section id="blog">
+                    <Blog />
+                </section>
+            )}
         </>
     );
 }
