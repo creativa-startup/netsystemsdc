@@ -10,19 +10,9 @@
       "region": "us-central1"
     }
   },
-  "apphosting": {
-    "backendId": "netsystemsdc-web",
-    "rootDir": "/",
-    "ignore": [
-      "node_modules",
-      ".git",
-      "firebase-debug.log",
-      "firebase-debug.*.log",
-      "functions"
-    ]
-  },
   "firestore": {
     "rules": "firestore.rules",
-    "indexes": "firestore.indexes.json"
+    "indexes": "firestore.indexes.json",
+    "database": "(default)"
   }
 }

@@ -191,7 +191,7 @@ export default function SeoEditor() {
                                         <div className="fixed inset-0" onClick={() => setShowColorPicker(false)} />
                                         <ChromePicker
                                             color={seoData.themeColor}
-                                            onChange={(c) => setSeoData({ ...seoData, themeColor: c.hex })}
+                                            onChange={(c: any) => setSeoData({ ...seoData, themeColor: c.hex })}
                                         />
                                     </div>
                                 )}

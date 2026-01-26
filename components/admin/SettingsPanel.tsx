@@ -239,7 +239,7 @@ export default function SettingsPanel() {
                                                 <div className="fixed inset-0" onClick={() => setActiveColorPicker(null)} />
                                                 <ChromePicker
                                                     color={localConfig.primaryColor}
-                                                    onChange={(c) => setLocalConfig({ ...localConfig, primaryColor: c.hex })}
+                                                    onChange={(c: any) => setLocalConfig({ ...localConfig, primaryColor: c.hex })}
                                                 />
                                             </div>
                                         )}
@@ -259,7 +259,7 @@ export default function SettingsPanel() {
                                                 <div className="fixed inset-0" onClick={() => setActiveColorPicker(null)} />
                                                 <ChromePicker
                                                     color={localConfig.accentColor}
-                                                    onChange={(c) => setLocalConfig({ ...localConfig, accentColor: c.hex })}
+                                                    onChange={(c: any) => setLocalConfig({ ...localConfig, accentColor: c.hex })}
                                                 />
                                             </div>
                                         )}
@@ -279,7 +279,7 @@ export default function SettingsPanel() {
                                                 <div className="fixed inset-0" onClick={() => setActiveColorPicker(null)} />
                                                 <ChromePicker
                                                     color={localConfig.textColor || '#171717'}
-                                                    onChange={(c) => setLocalConfig({ ...localConfig, textColor: c.hex })}
+                                                    onChange={(c: any) => setLocalConfig({ ...localConfig, textColor: c.hex })}
                                                 />
                                             </div>
                                         )}
